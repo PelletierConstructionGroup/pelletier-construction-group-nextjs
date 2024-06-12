@@ -6,6 +6,39 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --navigation-link-font-size: 16px;
+  --navigation-link-font-weight: 400;
+  --navigation-link-font-family: "Open Sans", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --navigation-link-color: #000000;
+  --navigation-link-letter-spacing: 0.1em;
+  --navigation-link-line-height: 1;
+  --navigation-link-text-transform: uppercase;
+  --navigation-link-font-variant: normal;
+  --navigation-link-active-color: #165FA4;
+  --navigation-link-active-font-weight: 700;
+  --navigation-mobile-button-color: #165FA4;
+  --navigation-dropdown-link-color: #000000;
+  --navigation-dropdown-link-active-color: #000000;
+  --navigation-dropdown-background-color: #ffffff;
+}
+
+@charset "UTF-8";
+.nav__link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: var(--navigation-link-color);
+  font-size: var(--navigation-link-font-size);
+  font-family: var(--navigation-link-font-family), sans-serif;
+  font-weight: var(--navigation-link-font-weight);
+  font-variant: var(--navigation-link-font-variant);
+  text-transform: var(--navigation-link-text-transform);
+  letter-spacing: var(--navigation-link-letter-spacing);
+  line-height: var(--navigation-link-line-height);
+  overflow-wrap: anywhere;
+}
+.nav__link--active {
+  color: var(--navigation-link-active-color);
+  font-weight: var(--navigation-link-active-font-weight);
 }
 
 @media (prefers-color-scheme: dark) {

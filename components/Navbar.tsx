@@ -3,7 +3,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import logo_small from "@/public/images/logo_small.png";
+import "@/app/globals.css";
+import logo_small from "@/public/logo_small.png";
 import {
   AppBar,
   Button,
@@ -12,11 +13,9 @@ import {
   Grid,
   Drawer,
   Box,
-  CssBaseline,
   Divider,
   List,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 
 
 const drawerWidth = 240;
@@ -35,7 +34,7 @@ export default function Navbar() {
   const drawer = (
     <Box sx={{ textAlign: "center" }}>
       <Link href="/" passHref>
-        <Button color="secondary">
+        <Button>
           <Image src={logo_small} alt="logo" width={100} height={50} />
         </Button>
       </Link>
@@ -45,11 +44,7 @@ export default function Navbar() {
           <Grid
             item
             key={item}
-            sx={{
-              color: "primary.main",
-            }}
           >
-      
             <Link href={links[index]} passHref>
               <Button key={item} onClick={handleDrawerToggle}>
                 {item}
@@ -64,22 +59,19 @@ export default function Navbar() {
   );
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
+    <Box className="nav_link">
       <AppBar component="nav">
         <Toolbar>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-          <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/" passHref>
-              <Button color="secondary">
+              <Button>
                 <Image src={logo_small} alt="logo" width={100} height={50}/>
               </Button>
             </Link>
@@ -89,18 +81,17 @@ export default function Navbar() {
               {navItems.map((item, index) => (
                 <Grid item key={item} sx={{ display: "flex" }}>
                     <Link href={links[index]} passHref>
-                    <Button key={item} sx={{ color: "#000" }}>
+                    <Button key={item} sx={{ color: "black" }}>
                         {item}
                       </Button>
                     </Link>
                 </Grid>
               ))}
             </Grid>
-          </Box>
-          
+          </Box>  
         </Toolbar>
       </AppBar>
-      <nav>
+      <nav className="nav_link">
         <Drawer
           variant="temporary"
           open={mobileOpen}
