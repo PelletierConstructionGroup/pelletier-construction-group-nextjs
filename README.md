@@ -2,7 +2,7 @@
 
 ## EXPERIENCE MATTERS.
 
-Pelletier Construction Group specializes in home remodeling and construction projects in Seattle, offering innovative design and building solutions. Our expertise ranges from open concept kitchens to large-scale renovations and new constructions: Backyard cottages, bathrooms, decks, fences, sheds, finishing basements, and most other home improvements or repairs. Pelletier Construction Group is firmly dedicated to its craftsmanship as well as its customers, so our goal is to provide the best customer experience and satisfaction in the industry. 
+Pelletier Construction Group specializes in home remodeling and construction projects in Seattle, offering innovative design and building solutions. Our expertise ranges from open concept kitchens to large-scale renovations and new constructions: Backyard cottages(ADUs), bathrooms, decks, fences, sheds, finishing basements, and most other home improvements or repairs. Pelletier Construction Group is firmly dedicated to its craftsmanship, as well as its customers, and our goal is to provide the best customer experience and satisfaction in the industry. 
 
 ## Projects
 
