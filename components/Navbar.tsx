@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import "@/app/globals.css";
 import logo_small from "@/public/logo_small.png";
 import {
   AppBar,
@@ -16,6 +15,7 @@ import {
   Divider,
   List,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 
 const drawerWidth = 240;
@@ -59,15 +59,17 @@ export default function Navbar() {
   );
 
   return (
-    <Box className="nav_link">
-      <AppBar component="nav">
+    <Box>
+      <AppBar component="nav" sx={{backgroundColor:"white"}}>
         <Toolbar>
           <IconButton
+            color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
+            <MenuIcon sx={{ justifyContent: 'flex-end', color:"black"}}/>
           </IconButton>
           <Box sx={{ flexGrow: 1 }}>
             <Link href="/" passHref>
@@ -81,7 +83,7 @@ export default function Navbar() {
               {navItems.map((item, index) => (
                 <Grid item key={item} sx={{ display: "flex" }}>
                     <Link href={links[index]} passHref>
-                    <Button key={item} sx={{ color: "black" }}>
+                    <Button key={item} sx={{ color: "black", fontSize:16 }}>
                         {item}
                       </Button>
                     </Link>
@@ -91,7 +93,7 @@ export default function Navbar() {
           </Box>  
         </Toolbar>
       </AppBar>
-      <nav className="nav_link">
+      <nav>
         <Drawer
           variant="temporary"
           open={mobileOpen}
