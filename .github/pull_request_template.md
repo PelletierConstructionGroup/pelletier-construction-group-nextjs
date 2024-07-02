@@ -10,4 +10,4 @@ Additional information to help others that are testing.
 Screenshots/gifs/videos/diagrams/other visual aids.
 Remember to:
 Add reviewers, assignees and labels in the menu on the right. --->
-Enable auto-merge (squash) at the bottom of the page.
+Enable auto-merge (squash) at the bottom of the page..
