@@ -9,18 +9,18 @@ export default function Home() {
     <Stack>
       <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ paddingTop: "120px", backgroundColor:"white" }}>
         <Typography component="h1" variant="h4" sx={{ pb: 4 }}>
-          Seattle's Premier DADU Specialists
+          Seattle&apos;s Premier DADU Specialists
         </Typography>
         <Typography>
           <Link href="tel:+19078417274" passHref>
-            <Box component="a" sx={{ color: "inherit", textDecoration: "none", '&:hover': { textDecoration: 'underline' } }}>
+            <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
               (907) 841-7274
             </Box>
           </Link>
         </Typography>
         <Typography>
           <Link href="mailto:ryan@pelletier.construction" passHref>
-            <Box component="a" sx={{ color: "inherit", textDecoration: "none", '&:hover': { textDecoration: 'underline' } }}>
+            <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
               ryan@pelletier.construction
             </Box>
           </Link>
