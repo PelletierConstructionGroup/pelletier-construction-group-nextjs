@@ -1,4 +1,4 @@
-import {Box, Button, Stack, Typography} from "@mui/material";
+import {Box, Stack, Typography} from "@mui/material";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: "100vh", maximumWidth: "100vw", backgroundColor: "white", color: "black" }}>
     <Stack>
-      <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ paddingTop: "120px", width: "100%", backgroundColor:"white" }}>
+      <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ width: "100%", paddingTop: "120px", backgroundColor:"white" }}>
       <Typography component="h1" variant="h4" sx={{ pb: 4 }}>
-          Estimates
+          Our Builds
         </Typography>
         <Box margin="auto" sx={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", backgroundColor: "rgba(54,54,54,1)" }}>
           <Typography component="h1" variant="h4" sx={{ pb: 4, pt: 4, color: "white" }}>
