@@ -20,10 +20,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 const drawerWidth = 240;
 
-const navItems = ["HOME", "PROJECTS", "ABOUT", "TESTIMONIALS", "CONTACT"];
+const navItems = ["HOME", "PROJECTS", "ESTIMATES", "ABOUT", "TESTIMONIALS", "CONTACT"];
 
 // TODO: update link after pages are created in app folder
-const links = ["/", "/projects-page", "/about", "/testimonials", "/contact"];
+const links = ["/", "/projects-page", "/estimates", "/about", "/testimonials", "/contact"];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
