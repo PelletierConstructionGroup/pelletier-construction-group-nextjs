@@ -76,7 +76,7 @@ export default function Home() {
                     <Box
                         margin="auto"
                         sx={{
-                            display: "flex",
+                            display: "grid",
                             flexDirection: "column",
                             alignItems: "center",
                             width: "100%",
@@ -97,7 +97,7 @@ export default function Home() {
                             style={{ border: 0 }}
                             loading="lazy"
                         >
-                            Loading…
+                            contacts us
                         </iframe>
                     </Box>
                 </Box>
