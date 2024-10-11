@@ -166,10 +166,9 @@ export default function Home() {
             </Box>
           </Box>
 
-          <div>
-            <h1>Welcome to the Carousel</h1>
+          <Box>
             <Carousel />
-          </div>
+          </Box>
 
           <Box
             margin="auto"
