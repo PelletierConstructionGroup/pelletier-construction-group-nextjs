@@ -56,13 +56,21 @@ export default function Home() {
           sx={{ width: "100%", paddingTop: "120px", backgroundColor: "white" }}
         >
           <Box>
-            <Typography component="h1" variant="h2">
+            <Typography
+              component="h1"
+              variant="h2"
+              sx={{ pb: 4, color: "rgba(168,63,16,1)" }}
+            >
               Maneesh
             </Typography>
-            <Typography component="h4" variant="h4" sx={{ pb: 4 }}>
+            <Typography
+              component="h4"
+              variant="h4"
+              sx={{ pb: 4, color: "rgba(168,63,16,1)" }}
+            >
               Kirkland, WA
             </Typography>
-            <Typography>
+            <Typography sx={{ pb: 4, color: "rgba(51, 65, 85)" }}>
               We hired Ryan with Pelletier Construction to do some home
               improvement to our house. We added a small deck to our backyard
               and also remodeled our two bathrooms, one of which is our master
