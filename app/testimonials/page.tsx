@@ -1,7 +1,10 @@
+"use client";
+import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import image from "@/public/images/familys-historic-home.jpg";
+import Carousel from "@/components/Carousel";
 import Link from "next/link";
 
 export default function Home() {
@@ -162,6 +165,11 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
+
+          <div>
+            <h1>Welcome to the Carousel</h1>
+            <Carousel />
+          </div>
 
           <Box
             margin="auto"
