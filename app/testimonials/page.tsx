@@ -16,6 +16,31 @@ export default function Home() {
             overflow: "hidden",
           }}
         >
+          <Box
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 2, // Ensures that the text is above the image
+              backgroundColor: "rgba(0, 0, 0, 0.4)", // 40% opacity overlay
+            }}
+          >
+            <Typography
+              sx={{
+                color: "white",
+                textAlign: "center",
+                fontSize: "2rem", // Adjust the size as needed
+              }}
+            >
+              KIND WORDS FROM OUR COLLABORATORS
+            </Typography>
+          </Box>
+
           <Image
             src={image}
             alt="The house from the offer."
@@ -27,16 +52,6 @@ export default function Home() {
               objectPosition: "center",
             }}
             priority={true}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.4)", // 40% opacity overlay
-            }}
           />
         </Box>
 
