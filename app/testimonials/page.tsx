@@ -6,23 +6,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        minHeight: "100vh",
-        maxWidth: "100vw",
-        backgroundColor: "white",
-        color: "red",
-      }}
-    >
+    <Box sx={{ mt: 5.7 }}>
       <Stack>
         <Box
           sx={{
             position: "relative",
             height: "520px",
             width: "100%",
-            overflow: "hidden", // Ensures any content outside the Box is hidden
+            overflow: "hidden",
           }}
         >
           <Image
@@ -30,10 +21,10 @@ export default function Home() {
             alt="The house from the offer."
             style={{
               width: "100%",
-              height: "auto", // Maintains the image's aspect ratio
-              maxHeight: "100%", // Ensures the height does not exceed the Box height
-              objectFit: "cover", // Ensures the image covers the box dimensions without stretching
-              objectPosition: "center", // Centers the image vertically within the box
+              height: "auto",
+              maxHeight: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
             }}
             priority={true}
           />
@@ -53,36 +44,58 @@ export default function Home() {
           margin="auto"
           textAlign="center"
           justifyContent="center"
-          sx={{ width: "100%", paddingTop: "120px", backgroundColor: "white" }}
+          sx={{ width: "100%", backgroundColor: "white" }}
         >
-          <Box>
-            <Typography
-              component="h1"
-              variant="h2"
-              sx={{ pb: 4, color: "rgba(168,63,16,1)" }}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              height: "520px",
+              gap: 2,
+            }}
+          >
+            <Box
+              width="75%"
+              margin="auto"
+              paddingX="80px"
+              textAlign="left"
+              justifyContent="center"
             >
-              Maneesh
-            </Typography>
-            <Typography
-              component="h4"
-              variant="h4"
-              sx={{ pb: 4, color: "rgba(168,63,16,1)" }}
-            >
-              Kirkland, WA
-            </Typography>
-            <Typography sx={{ pb: 4, color: "rgba(51, 65, 85)" }}>
-              We hired Ryan with Pelletier Construction to do some home
-              improvement to our house. We added a small deck to our backyard
-              and also remodeled our two bathrooms, one of which is our master
-              bath. We did it all, from tile work, replacing a shower with a
-              tub, cabinets, flooring... His bid was very fair, his work ethic
-              was superb, and the quality of work was excellent. He cares for
-              customer service, and with each change or concern, he was very
-              attentive and responsive, which was great and easy to work with. I
-              definitely recommend working with him and his company, and will
-              probably use them again for our future kitchen remodel.
-            </Typography>
+              <Box margin="auto" textAlign="left" justifyContent="center">
+                <Typography
+                  component="h3"
+                  variant="h3"
+                  sx={{ color: "rgba(168,63,16,1)" }}
+                >
+                  Maneesh
+                </Typography>
+              </Box>
+              <Box margin="auto" textAlign="left" justifyContent="center">
+                <Typography
+                  component="h5"
+                  variant="h5"
+                  sx={{ color: "rgba(168,63,16,1)" }}
+                >
+                  Kirkland, WA
+                </Typography>
+              </Box>
+            </Box>
+            <Box margin="auto" textAlign="left" justifyContent="center">
+              <Typography width="90%" sx={{ color: "rgba(51, 65, 85)" }}>
+                We hired Ryan with Pelletier Construction to do some home
+                improvement to our house. We added a small deck to our backyard
+                and also remodeled our two bathrooms, one of which is our master
+                bath. We did it all, from tile work, replacing a shower with a
+                tub, cabinets, flooring... His bid was very fair, his work ethic
+                was superb, and the quality of work was excellent. He cares for
+                customer service, and with each change or concern, he was very
+                attentive and responsive, which was great and easy to work with.
+                I definitely recommend working with him and his company, and
+                will probably use them again for our future kitchen remodel.
+              </Typography>
+            </Box>
           </Box>
+
           <Box
             margin="auto"
             sx={{
