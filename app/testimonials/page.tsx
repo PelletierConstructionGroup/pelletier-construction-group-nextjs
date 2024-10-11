@@ -112,12 +112,12 @@ export default function Home() {
           </Box>
 
           <Box
-            backgroundColor="rgba(168,63,16,1)"
             sx={{
               display: "flex",
               flexDirection: "row",
               height: "520px",
               gap: 2,
+              backgroundColor: "rgba(168,63,16,1)",
             }}
           >
             <Box
