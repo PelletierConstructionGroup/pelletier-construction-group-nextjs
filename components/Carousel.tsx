@@ -4,12 +4,12 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import StarIcon from "@mui/icons-material/Star";
 
-// Define props interface for the Carousel component
 interface CarouselProps {
-  slides: React.ReactNode[]; // Accepts an array of React nodes as slides
+  slides: React.ReactNode[];
+  visibility: "visible" | "hidden";
 }
 
-const Carousel: React.FC<CarouselProps> = ({ slides }) => {
+const Carousel: React.FC<CarouselProps> = ({ slides, visibility }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(true);
 
@@ -42,7 +42,13 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
         height: "520px",
       }}
     >
-      <Box color="#ffbe28" paddingBottom={2}>
+      <Box
+        sx={{
+          visibility: visibility, // Use the visibility prop here
+          color: "#ffbe28",
+          paddingBottom: 2,
+        }}
+      >
         <StarIcon fontSize="large" />
         <StarIcon fontSize="large" />
         <StarIcon fontSize="large" />

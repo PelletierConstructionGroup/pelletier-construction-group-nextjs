@@ -7,6 +7,8 @@ import image from "@/public/images/familys-historic-home.jpg";
 import Carousel from "@/components/Carousel";
 import Link from "next/link";
 
+//Carousel prop configuration
+const starsVisibility = "visible";
 const slides = [
   <Typography key="slide1">
     Pelletier Construction Group did an incredible job helping with our kitchen
@@ -191,7 +193,7 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
-          <Carousel slides={slides} />;
+          <Carousel slides={slides} visibility={starsVisibility} />;
           <Box
             margin="auto"
             sx={{
