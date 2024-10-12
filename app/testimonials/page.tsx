@@ -10,15 +10,15 @@ import Link from "next/link";
 const slides = [
   <Typography key="slide1">
     Pelletier Construction Group did an incredible job helping with our kitchen
-    remodel and I'm already looking forward to working with them again in the
-    future. Ryan was incredibly responsive every time we had a question, all the
-    way from the early stages of us buying materials to the end of the project.
-    Along with Ryan, his crew was incredibly thorough, kind, and FAST. We
-    couldn't believe how quickly this project got done. In addition to quick and
-    high quality work, we found him to be affordable and significantly less than
-    other quotes we received. At first that worried me, thinking maybe they were
-    too good to be true, but Ryan is just a good-hearted person with a high bar
-    for quality work...
+    remodel and I&apos;m already looking forward to working with them again in
+    the future. Ryan was incredibly responsive every time we had a question, all
+    the way from the early stages of us buying materials to the end of the
+    project. Along with Ryan, his crew was incredibly thorough, kind, and FAST.
+    We couldn&apos;t believe how quickly this project got done. In addition to
+    quick and high quality work, we found him to be affordable and significantly
+    less than other quotes we received. At first that worried me, thinking maybe
+    they were too good to be true, but Ryan is just a good-hearted person with a
+    high bar for quality work...
   </Typography>,
   <Typography key="slide2">
     I am so grateful to have found Ryan! He has been helping me build out my
