@@ -7,9 +7,8 @@ import image from "@/public/images/familys-historic-home.jpg";
 import Carousel from "@/components/Carousel";
 import Link from "next/link";
 
-// Slide content for the carousel
 const slides = [
-  <Typography key="slide1" sx={{ p: 2 }}>
+  <Typography key="slide1">
     Pelletier Construction Group did an incredible job helping with our kitchen
     remodel and I'm already looking forward to working with them again in the
     future. Ryan was incredibly responsive every time we had a question, all the
@@ -21,7 +20,7 @@ const slides = [
     too good to be true, but Ryan is just a good-hearted person with a high bar
     for quality work...
   </Typography>,
-  <Typography key="slide2" sx={{ p: 2 }}>
+  <Typography key="slide2">
     I am so grateful to have found Ryan! He has been helping me build out my
     business and has worked with me while I searched for the right location.
     Ryan is incredibly responsive and is a clear and kind communicator. He gave
@@ -37,10 +36,8 @@ const slides = [
 
 export default function Home() {
   return (
-    // Main container with top margin
     <Box sx={{ mt: 5.7 }}>
       <Stack>
-        {/* Header section with image background and overlay text */}
         <Box
           sx={{
             position: "relative",
@@ -49,7 +46,6 @@ export default function Home() {
             overflow: "hidden",
           }}
         >
-          {/* Overlay box for the text above the image */}
           <Box
             sx={{
               position: "absolute",
@@ -68,14 +64,13 @@ export default function Home() {
               sx={{
                 color: "white",
                 textAlign: "center",
-                fontSize: "2rem",
+                fontSize: "2rem", // Adjust the size as needed
               }}
             >
               KIND WORDS FROM OUR COLLABORATORS
             </Typography>
           </Box>
 
-          {/* Background image */}
           <Image
             src={image}
             alt="The house from the offer."
@@ -90,17 +85,12 @@ export default function Home() {
           />
         </Box>
 
-        {/* Main content area containing testimonials */}
         <Box
-          sx={{
-            margin: "auto",
-            textAlign: "center",
-            justifyContent: "center",
-            width: "100%",
-            backgroundColor: "white",
-          }}
+          margin="auto"
+          textAlign="center"
+          justifyContent="center"
+          sx={{ width: "100%", backgroundColor: "white" }}
         >
-          {/* Testimonial section for Testimonial 1 */}
           <Box
             sx={{
               display: "flex",
@@ -109,42 +99,34 @@ export default function Home() {
               gap: 2,
             }}
           >
-            {/* Left side with testimonial details */}
             <Box
-              sx={{
-                width: "75%",
-                margin: "auto",
-                px: 10,
-                textAlign: "left",
-                justifyContent: "center",
-              }}
+              width="75%"
+              margin="auto"
+              paddingX="80px"
+              textAlign="left"
+              justifyContent="center"
             >
-              <Typography
-                component="h4"
-                variant="h4"
-                sx={{ color: "rgba(168,63,16,1)", mb: 1 }}
-              >
-                Maneesh
-              </Typography>
-              <Typography
-                component="h6"
-                variant="h6"
-                sx={{ color: "rgba(168,63,16,1)" }}
-              >
-                Kirkland, WA
-              </Typography>
+              <Box margin="auto" textAlign="left" justifyContent="center">
+                <Typography
+                  component="h4"
+                  variant="h4"
+                  sx={{ color: "rgba(168,63,16,1)" }}
+                >
+                  Maneesh
+                </Typography>
+              </Box>
+              <Box margin="auto" textAlign="left" justifyContent="center">
+                <Typography
+                  component="h6"
+                  variant="h6"
+                  sx={{ color: "rgba(168,63,16,1)" }}
+                >
+                  Kirkland, WA
+                </Typography>
+              </Box>
             </Box>
-
-            {/* Right side with testimonial content */}
-            <Box
-              sx={{
-                margin: "auto",
-                textAlign: "left",
-                justifyContent: "center",
-                width: "90%",
-              }}
-            >
-              <Typography sx={{ color: "rgba(51, 65, 85)" }}>
+            <Box margin="auto" textAlign="left" justifyContent="center">
+              <Typography width="90%" sx={{ color: "rgba(51, 65, 85)" }}>
                 We hired Ryan with Pelletier Construction to do some home
                 improvement to our house. We added a small deck to our backyard
                 and also remodeled our two bathrooms, one of which is our master
@@ -158,8 +140,6 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
-
-          {/* Testimonial section for Testimonial 2 */}
           <Box
             sx={{
               display: "flex",
@@ -169,42 +149,34 @@ export default function Home() {
               backgroundColor: "rgba(168,63,16,1)",
             }}
           >
-            {/* Left side with testimonial details */}
             <Box
-              sx={{
-                width: "75%",
-                margin: "auto",
-                px: 10,
-                textAlign: "left",
-                justifyContent: "center",
-              }}
+              width="75%"
+              margin="auto"
+              paddingX="80px"
+              textAlign="left"
+              justifyContent="center"
             >
-              <Typography
-                component="h4"
-                variant="h4"
-                sx={{ color: "rgba(255,255,255,1)", mb: 1 }}
-              >
-                Heather
-              </Typography>
-              <Typography
-                component="h6"
-                variant="h6"
-                sx={{ color: "rgba(255,255,255,1)" }}
-              >
-                Seattle, WA
-              </Typography>
+              <Box margin="auto" textAlign="left" justifyContent="center">
+                <Typography
+                  component="h4"
+                  variant="h4"
+                  sx={{ color: "rgba(255,255,255,1)" }}
+                >
+                  Heather
+                </Typography>
+              </Box>
+              <Box margin="auto" textAlign="left" justifyContent="center">
+                <Typography
+                  component="h6"
+                  variant="h6"
+                  sx={{ color: "rgba(255,255,255,1)" }}
+                >
+                  Seattle, WA
+                </Typography>
+              </Box>
             </Box>
-
-            {/* Right side with testimonial content */}
-            <Box
-              sx={{
-                margin: "auto",
-                textAlign: "left",
-                justifyContent: "center",
-                width: "90%",
-              }}
-            >
-              <Typography sx={{ color: "rgba(255,255,255,1)" }}>
+            <Box margin="auto" textAlign="left" justifyContent="center">
+              <Typography width="90%" sx={{ color: "rgba(255,255,255,1)" }}>
                 We worked with the PCG team on two projects after moving into
                 our new home in May 2021: 1) a renovation of our downstairs
                 family room to remove some old style cabinets and 2) a remodel
@@ -219,14 +191,10 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
-
-          {/* Carousel section displaying slides */}
-          <Carousel slides={slides} />
-
-          {/* Contact section with a Google form */}
+          <Carousel slides={slides} />;
           <Box
+            margin="auto"
             sx={{
-              margin: "auto",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -241,20 +209,16 @@ export default function Home() {
             >
               Get in Touch
             </Typography>
-            {/* Embedded Google Form for user contact */}
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSelwJL2BR_yNzPqrdGUy_s5CZFI6mNpHTv4LQ0IxRYpjwvUVQ/viewform?embedded=true"
               width="700"
               height="1300"
-              style={{ border: 0 }}
             >
               Loading…
             </iframe>
           </Box>
         </Box>
       </Stack>
-
-      {/* Footer section */}
       <Footer />
     </Box>
   );

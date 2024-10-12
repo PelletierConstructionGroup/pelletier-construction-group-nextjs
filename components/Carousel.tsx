@@ -4,16 +4,15 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import StarIcon from "@mui/icons-material/Star";
 
+// Define props interface for the Carousel component
 interface CarouselProps {
-  slides: React.ReactNode[];
+  slides: React.ReactNode[]; // Accepts an array of React nodes as slides
 }
 
 const Carousel: React.FC<CarouselProps> = ({ slides }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
-  // State to control the fade transition effect
   const [fade, setFade] = useState<boolean>(true);
 
-  // Function to change the slide and trigger a fade transition
   const showSlide = (n: number) => {
     setFade(false);
     setTimeout(() => {
@@ -21,14 +20,13 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
         (prevIndex) => (prevIndex + n + slides.length) % slides.length
       );
       setFade(true);
-    }, 0); // Timeout is 0 to allow the fade out before the new slide shows
+    }, 0);
   };
 
-  // Automatically change slides every x seconds
   useEffect(() => {
     const interval = setInterval(() => {
       showSlide(1);
-    }, 5000); // Change slide every 5000 milliseconds (5 seconds)
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [slides.length]);
@@ -44,7 +42,6 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
         height: "520px",
       }}
     >
-      {/* Display a row of star icons as a rating indicator */}
       <Box color="#ffbe28" paddingBottom={2}>
         <StarIcon fontSize="large" />
         <StarIcon fontSize="large" />
@@ -52,8 +49,6 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
         <StarIcon fontSize="large" />
         <StarIcon fontSize="large" />
       </Box>
-
-      {/* Container for slide navigation and content */}
       <Box
         sx={{
           display: "flex",
@@ -61,12 +56,9 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
           width: "auto",
         }}
       >
-        {/* Button to navigate to the previous slide */}
         <Button aria-label="Previous" onClick={() => showSlide(-1)}>
           <ArrowBackIosNewIcon />
         </Button>
-
-        {/* Fade transition for the slide content */}
         <Fade in={fade} timeout={500}>
           <Box
             sx={{
@@ -77,14 +69,11 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
               color: "#666",
             }}
           >
-            {/* Display the current slide content */}
             <Typography variant="h5" sx={{ fontStyle: "italic" }}>
               {slides[slideIndex]}
             </Typography>
           </Box>
         </Fade>
-
-        {/* Button to navigate to the next slide */}
         <Button aria-label="Next" onClick={() => showSlide(1)}>
           <ArrowForwardIosIcon />
         </Button>
