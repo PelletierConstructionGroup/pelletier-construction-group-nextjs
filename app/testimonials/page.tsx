@@ -7,6 +7,33 @@ import image from "@/public/images/familys-historic-home.jpg";
 import Carousel from "@/components/Carousel";
 import Link from "next/link";
 
+const slides = [
+  <Typography key="slide1">
+    Pelletier Construction Group did an incredible job helping with our kitchen
+    remodel and I'm already looking forward to working with them again in the
+    future. Ryan was incredibly responsive every time we had a question, all the
+    way from the early stages of us buying materials to the end of the project.
+    Along with Ryan, his crew was incredibly thorough, kind, and FAST. We
+    couldn't believe how quickly this project got done. In addition to quick and
+    high quality work, we found him to be affordable and significantly less than
+    other quotes we received. At first that worried me, thinking maybe they were
+    too good to be true, but Ryan is just a good-hearted person with a high bar
+    for quality work...
+  </Typography>,
+  <Typography key="slide2">
+    I am so grateful to have found Ryan! He has been helping me build out my
+    business and has worked with me while I searched for the right location.
+    Ryan is incredibly responsive and is a clear and kind communicator. He gave
+    me quotes in a very reasonable amount of time, did thorough surveying of
+    each space we looked at, and gave me lots of options for the work I needed
+    done! He took time to answer complicated questions thoughtfully and never
+    acted like my potentially silly questions were weird. His prices are super
+    fair, and he does a great job helping you get your needs met at a price that
+    works for you. As a small business this is essential. The timeliness has
+    been so impressive...
+  </Typography>,
+];
+
 export default function Home() {
   return (
     <Box sx={{ mt: 5.7 }}>
@@ -113,7 +140,6 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
-
           <Box
             sx={{
               display: "flex",
@@ -165,11 +191,7 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
-
-          <Box>
-            <Carousel />
-          </Box>
-
+          <Carousel slides={slides} />;
           <Box
             margin="auto"
             sx={{
