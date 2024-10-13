@@ -8,8 +8,10 @@ import Carousel from "@/components/Carousel";
 import Link from "next/link";
 
 //Carousel prop configuration
-const starsVisibility = "visible";
+const timer = 10; // number of second before the carousel changes
+const starsVisibility = "visible"; // Visibility of the 5 stars
 const slides = [
+  // Add more reviews here!
   <Typography key="slide1">
     Pelletier Construction Group did an incredible job helping with our kitchen
     remodel and I&apos;m already looking forward to working with them again in
@@ -193,7 +195,12 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
-          <Carousel slides={slides} visibility={starsVisibility} />;
+          <Carousel
+            slides={slides}
+            visibility={starsVisibility}
+            timer={timer}
+          />
+          ;
           <Box
             margin="auto"
             sx={{
