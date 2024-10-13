@@ -7,9 +7,10 @@ import StarIcon from "@mui/icons-material/Star";
 interface CarouselProps {
   slides: React.ReactNode[];
   visibility: "visible" | "hidden";
+  timer: number;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ slides, visibility }) => {
+const Carousel: React.FC<CarouselProps> = ({ slides, visibility, timer }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(true);
 
@@ -26,7 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides, visibility }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       showSlide(1);
-    }, 5000);
+    }, timer * 1000);
 
     return () => clearInterval(interval);
   }, [slides.length]);
