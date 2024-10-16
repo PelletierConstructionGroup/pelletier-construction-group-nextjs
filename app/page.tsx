@@ -36,20 +36,6 @@ export default function Home() {
         </Button>
       </Box>
     </Stack>
-    <Card sx={{ height: 362.359, filter:'brightness(80%)', backgroundImage: "url('/images/index/background_inner.jpg')", backgroundPosition:'center', marginTop: 5 }}>
-      <CardContent sx={{alignContent: "center"}}>
-        <Typography color="white" component="h1" fontSize="36px" sx={{ pb: 2, textAlign: "center", marginTop:2, }}>EXPERIENCE MATTERS.</Typography>
-        <Typography color="white" variant="body1" fontSize="22px" sx={{ pb: 4, textAlign: "center", marginLeft:"10%", marginRight:"10%" }}>
-        We specialize in all aspects of home remodeling and improvements. Bathrooms, kitchens, decks, fences, sheds, finishing basements, and most other home improvements or repairs. Our goal is the provide the best customer experience and satisfaction in the industry. Give us a call for a free estimate.
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <Button variant="contained" color="primary" href="/contact" sx={{ fontSize: "1.2rem", width: "300px", height: "50px", textAlign: "center", marginLeft:"auto", marginRight:"auto" }}>
-        GET A FREE ESTIMATE
-        </Button>
-      </CardActions>
-    </Card>   
-    </Stack>
     <Typography component="h1" variant="h4" sx={{ pb: 5, textAlign:'center', mt:3 }}>EXQUISITE CRAFTSMANSHIP & CARPENTRY</Typography>
     <ImageList sx={{ width:'auto', height:'auto', marginLeft: 5, marginRight: 5 }} cols={3} rowHeight={330}>
       {itemData.map((item) => (
@@ -75,6 +61,19 @@ export default function Home() {
         </ImageListItem>
       ))}
     </ImageList>
+    <Card sx={{ height: 362.359, backgroundImage: "url('/images/index/background_inner.jpg')", backgroundPosition:'center', backgroundColor:"rgba(0,0,0,0.4)", marginTop: 5 }}>
+      <CardContent sx={{alignContent: "center"}}>
+        <Typography color="white" component="h1" fontSize="36px" sx={{ pb: 2, textAlign: "center", marginTop:2, }}>EXPERIENCE MATTERS.</Typography>
+        <Typography color="white" variant="body1" fontSize="22px" sx={{ pb: 4, textAlign: "center", marginLeft:"10%", marginRight:"10%" }}>
+        We specialize in all aspects of home remodeling and improvements. Bathrooms, kitchens, decks, fences, sheds, finishing basements, and most other home improvements or repairs. Our goal is the provide the best customer experience and satisfaction in the industry. Give us a call for a free estimate.
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <Button variant="contained" color="primary" href="/contact" sx={{ fontSize: "1.2rem", width: "300px", height: "50px", textAlign: "center", marginLeft:"auto", marginRight:"auto" }}>
+        GET A FREE ESTIMATE
+        </Button>
+      </CardActions>
+    </Card>  
     <Footer />
     </Box>
   )
