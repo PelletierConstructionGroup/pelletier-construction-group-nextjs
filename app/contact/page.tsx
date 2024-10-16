@@ -92,8 +92,8 @@ export default function Home() {
                         </Typography>
                         <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLSelwJL2BR_yNzPqrdGUy_s5CZFI6mNpHTv4LQ0IxRYpjwvUVQ/viewform?embedded=true"
-                            width="100%"
-                            height="100%"
+                            width="82%"
+                            height="82%"
                             style={{ border: 0 }}
                             loading="lazy"
                         >
