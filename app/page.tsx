@@ -1,6 +1,10 @@
 import {Box, Button, Card, CardActions, CardContent, Stack, Typography} from "@mui/material";
 import Footer from '../components/Footer';
 import Link from "next/link";
+import Image from "next/image";
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Brightness2 } from "@mui/icons-material";
 
 
@@ -45,7 +49,84 @@ export default function Home() {
         </Button>
       </CardActions>
     </Card>   
+    </Stack>
+    <Typography component="h1" variant="h4" sx={{ pb: 5, textAlign:'center', mt:3 }}>EXQUISITE CRAFTSMANSHIP & CARPENTRY</Typography>
+    <ImageList sx={{ width:'auto', height:'auto', marginLeft: 5, marginRight: 5 }} cols={3} rowHeight={330}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img} sx={{minWidth:248, marginLeft:1, marginRight:1}}>
+          <Image
+            src={`${item.img}`}
+            alt={item.title}
+            width={330}
+            height={330}
+            style={{
+              width:"100%",
+              height:"100%",
+              minWidth: 248,
+              minHeight:248,
+              objectFit: "cover",
+            }}
+            priority={true}
+          />
+          <ImageListItemBar
+            title={item.title}
+            position="below"
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
     <Footer />
     </Box>
   )
 }
+
+const itemData = [
+  {
+    img: '/images/index/open-concept-kitchen.jpg',
+    title: 'Open Concept Kitchen',
+  },
+  {
+    img: '/images/index/mukilteo_house.jpg',
+    title: 'Mukilteo House',
+  },
+  {
+    img: '/images/index/wrap-around-deck-with-patio-cover.jpg',
+    title: 'Wrap around deck with patio cover',
+  },
+  {
+    img: '/images/index/ranch_home_update.jpg',
+    title: 'Ranch Home Update',
+  },
+  {
+    img: '/images/index/timber_frame_barn.jpg',
+    title: 'Timber Frame Barn',
+  },
+  {
+    img: '/images/index/composite-deck.jpg',
+    title: 'Composite Deck',
+  },
+  {
+    img: '/images/index/great_wall_of_lake_city.jpg',
+    title: 'Great Wall of Lake City',
+  },
+  {
+    img: '/images/index/bathroom_expansion.jpg',
+    title: 'Bathroom Expansion',
+  },
+  {
+    img: '/images/index/railing.jpg',
+    title: 'Railing',
+  },
+  {
+    img: '/images/index/bathroom.jpg',
+    title: 'Bathroom',
+  },
+  {
+    img: '/images/index/modern-porch.jpg',
+    title: 'Modern Porch',
+  },
+  {
+    img: '/images/index/new-shop.jpg',
+    title: 'New Shop',
+  },
+];    
