@@ -69,7 +69,7 @@ export default function Home() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button variant="contained" color="primary" href="/contact" sx={{ fontSize: "1.2rem", width: "300px", height: "50px", textAlign: "center", marginLeft:"auto", marginRight:"auto" }}>
+        <Button variant="contained" color="primary" href="/estimates" sx={{ fontSize: "1.2rem", width: "300px", height: "50px", textAlign: "center", marginLeft:"auto", marginRight:"auto" }}>
         GET A FREE ESTIMATE
         </Button>
       </CardActions>
