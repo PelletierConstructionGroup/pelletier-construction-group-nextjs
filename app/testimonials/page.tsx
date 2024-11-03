@@ -8,7 +8,7 @@ import Carousel from "@/components/Carousel";
 import Link from "next/link";
 
 //Carousel prop configuration
-const timer = 10; // number of second before the carousel changes
+const timer = 50; // number of second before the carousel changes
 const starsVisibility = "visible"; // Visibility of the 5 stars
 const slides = [
   // Add more reviews here!
