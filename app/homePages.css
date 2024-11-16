@@ -1,0 +1,59 @@
+/* General Styling for the Home Page */
+body {
+  font-family: 'Open Sans', sans-serif; /* Consider importing this font via Google Fonts */
+  margin: 0;
+  padding: 0;
+  background: url('/path/to/background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styling */
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #004494;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+  }
+}
+
+/* omar */
