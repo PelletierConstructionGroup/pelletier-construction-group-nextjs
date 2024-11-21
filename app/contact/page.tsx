@@ -12,18 +12,31 @@ export default function Home() {
           Contact Us
         </Typography>
         <Typography>
-          <Link href="tel:+19078417274" passHref>
+          {/* old */}
+          {/* <Link href="tel:+19078417274" passHref>
             <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
               (907) 841-7274
             </Box>
-          </Link>
+          </Link> */}
+
+        {/* updated to */}
+        <Box component="a" href="tel:+19078417274" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}> (907)8417274
+        </Box>
+
         </Typography>
         <Typography>
-          <Link href="mailto:ryan@pelletier.construction" passHref>
+          {/* old */}
+          {/* <Link href="mailto:ryan@pelletier.construction" passHref>
             <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
               ryan@pelletier.construction
             </Box>
-          </Link>
+          </Link> */}
+
+          {/* updated to */}
+
+          <Box component="a" href="mailto: ryan@pelletier.construction" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }} > ryan@pelletier.construction
+          </Box>
+
         </Typography>
         <Button variant="contained" color="primary" href="/contact" sx={{ mt: 3, mb: 4, fontSize: "1.2rem", width: "200px", height: "50px" }}>
           Call Now
