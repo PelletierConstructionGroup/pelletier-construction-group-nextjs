@@ -1,5 +1,7 @@
 import {Box, Button, Stack, Typography} from "@mui/material";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import image from "@/public/images/familys-historic-home.jpg";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,12 +9,62 @@ export default function Home() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: "100vh", maximumWidth: "100vw", backgroundColor: "white", color: "black" }}>
     <Stack>
+      {/* header Section with similar image in testimonial page */}
+      <Box
+        sx={{
+          position: "relative",
+          height: "520px",
+          width: "100%",
+          overflow: "hidden",
+        }}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 2, // Ensures that the text is above the image
+            backgroundColor: "rgba(0, 0, 0, 0.4)", // 40% opacity overlay
+          }}
+        >
+          <Typography
+            sx={{
+              color: "white",
+              textAlign: "center",
+              fontSize: "2rem", // Adjust the size as needed
+            }}
+          >
+           
+            {/* placeholder for text over image here */}
+            
+          </Typography>
+        </Box>
+
+        <Image
+          src={image}
+          alt="The house from the offer."
+          style={{
+            width: "100%",
+            height: "auto",
+            maxHeight: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+          priority={true}
+        />
+      </Box>
+
       <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ width: "100%", paddingTop: "120px", backgroundColor:"white" }}>
       <Typography component="h1" variant="h4" sx={{ pb: 4 }}>
           Contact Us
         </Typography>
         <Typography>
-          {/* old */}
+        {/* old */}
           {/* <Link href="tel:+19078417274" passHref>
             <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
               (907) 841-7274
@@ -25,6 +77,7 @@ export default function Home() {
 
         </Typography>
         <Typography>
+          
           {/* old */}
           {/* <Link href="mailto:ryan@pelletier.construction" passHref>
             <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
@@ -32,8 +85,7 @@ export default function Home() {
             </Box>
           </Link> */}
 
-          {/* updated to */}
-
+          {/* updated to */}  
           <Box component="a" href="mailto: ryan@pelletier.construction" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }} > ryan@pelletier.construction
           </Box>
 
