@@ -70,25 +70,25 @@ export default function DADU() {
     </Stack>
     <Stack margin="auto" spacing={{ xs: 1, sm: 2, md:3 }} direction="row" useFlexGap sx={{ flexWrap: 'wrap', maxWidth:"80%" }}>
       {gallery.map((design)=> (
-        <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          component="img"
-          alt={design.name}
-          height="140"
-          image={design.img}
-          sx={{minWidth:'40px'}}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {design.name}
-          </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            {design.description}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">More details</Button>
-        </CardActions>
+        <Card key={design.name} sx={{ maxWidth: 345 }}>
+          <CardMedia
+            component="img"
+            alt={design.name}
+            height="140"
+            image={design.img}
+            sx={{minWidth:'40px'}}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {design.name}
+            </Typography>
+            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+              {design.description}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">More details</Button>
+          </CardActions>
       </Card>
       ))}
     </Stack>
@@ -99,7 +99,7 @@ export default function DADU() {
 
 const gallery: Design[] = [
   {
-    name: 'CAST Architecture',
+    name: 'CAST Architecture-1',
     img: '/images/index/timber_frame_barn.jpg',
     description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
     sqft: '467',
@@ -107,7 +107,7 @@ const gallery: Design[] = [
     bath: '1',
   },
   {
-    name: 'CAST Architecture',
+    name: 'CAST Architecture-2',
     img: '/images/index/timber_frame_barn.jpg',
     description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
     sqft: '467',
@@ -115,7 +115,7 @@ const gallery: Design[] = [
     bath: '1',
   },
   {
-    name: 'CAST Architecture',
+    name: 'CAST Architecture-3',
     img: '/images/index/timber_frame_barn.jpg',
     description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
     sqft: '467',
