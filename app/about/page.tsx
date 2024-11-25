@@ -40,7 +40,7 @@ export default function Home() {
                             justifyContent: "flex-start",
                             alignItems: "flex-start",
                             maxWidth: "80%",
-                            gap: 11,
+                            gap: 8,
                             mb: 4,
                         }}
                     >
