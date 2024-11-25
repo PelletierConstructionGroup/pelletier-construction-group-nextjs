@@ -1,6 +1,20 @@
 import {Box, Button, Stack, Typography} from "@mui/material";
 import Footer from "@/components/Footer";
 import CheckIcon from '@mui/icons-material/Check';
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+
+interface Design {
+  name: string;
+  img: string;
+  description: string;
+  sqft: string;
+  bed: string;
+  bath: string;
+}
 
 export default function DADU() {
 
@@ -54,8 +68,58 @@ export default function DADU() {
         </Button>
       </Box>
     </Stack>
-        
+    <Stack margin="auto" spacing={{ xs: 1, sm: 2, md:3 }} direction="row" useFlexGap sx={{ flexWrap: 'wrap', maxWidth:"80%" }}>
+      {gallery.map((design)=> (
+        <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+          component="img"
+          alt={design.name}
+          height="140"
+          image={design.img}
+          sx={{minWidth:'40px'}}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {design.name}
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            {design.description}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">More details</Button>
+        </CardActions>
+      </Card>
+      ))}
+    </Stack>
     <Footer />
     </Box>
   )
 }
+
+const gallery: Design[] = [
+  {
+    name: 'CAST Architecture',
+    img: '/images/index/timber_frame_barn.jpg',
+    description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
+    sqft: '467',
+    bed: '1-2',
+    bath: '1',
+  },
+  {
+    name: 'CAST Architecture',
+    img: '/images/index/timber_frame_barn.jpg',
+    description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
+    sqft: '467',
+    bed: '1-2',
+    bath: '1',
+  },
+  {
+    name: 'CAST Architecture',
+    img: '/images/index/timber_frame_barn.jpg',
+    description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
+    sqft: '467',
+    bed: '1-2',
+    bath: '1',
+  },
+];
