@@ -14,7 +14,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import { Brightness2 } from "@mui/icons-material";
-import styles from "./homePages.css";
+// import styles from "./homePages.css";
 
 export default function Home() {
     return (
@@ -32,7 +32,17 @@ export default function Home() {
                     margin="auto"
                     textAlign={"center"}
                     justifyContent={"center"}
-                    sx={{ paddingTop: "120px", backgroundColor: "white" }}
+                    sx={{ 
+                        paddingTop: "150px", 
+                        // bgcolor: "white",
+                        backgroundImage: "url('/images/index/open-concept-kitchen.jpg')",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        width: "100%",
+                        height: "450px",
+                        color: "white",
+                    }}
                 >
                     <Typography component="h1" variant="h4" sx={{ pb: 4 }}>
                         Seattle&apos;s Premier DADU Specialists
