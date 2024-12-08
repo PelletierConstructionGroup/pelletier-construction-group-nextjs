@@ -38,7 +38,8 @@ export default function Home() {
                         Seattle&apos;s Premier DADU Specialists
                     </Typography>
                     <Typography>
-                        <Link href="tel:+19078417274" passHref>
+                        {/* OLD -> Need to update phone Number */}
+                        {/* <Link href="tel:+19078417274" passHref>
                             <Box
                                 component="a"
                                 sx={{
@@ -49,10 +50,11 @@ export default function Home() {
                             >
                                 (907) 841-7274
                             </Box>
-                        </Link>
+                        </Link> */}
                     </Typography>
                     <Typography>
-                        <Link
+                        {/* OLD */}
+                        {/* <Link
                             href="mailto:ryan@pelletier.construction"
                             passHref
                         >
@@ -66,7 +68,15 @@ export default function Home() {
                             >
                                 ryan@pelletier.construction
                             </Box>
-                        </Link>
+                        </Link> */}
+
+                        <Box 
+                            component="a" 
+                            href="mailto: ryan@pelletier.construction" 
+                            sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }} 
+                        > 
+                            ryan@pelletier.construction
+                        </Box>
                     </Typography>
                     <Button
                         variant="contained"

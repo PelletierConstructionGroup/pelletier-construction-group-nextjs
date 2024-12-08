@@ -1,44 +1,106 @@
-import {Box, Button, Stack, Typography} from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+import Image from "next/image";
+// i think the banner photo is a little bit bigger and it should be replaced once we get the actual photo
+import image from "@/public/images/projects/great-wall-of-lake-city/2.jpeg";
 
 export default function Home() {
-
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: "100vh", maximumWidth: "100vw", backgroundColor: "white", color: "black" }}>
-    <Stack>
-      <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ width: "100%", paddingTop: "120px", backgroundColor:"white" }}>
-      <Typography component="h1" variant="h4" sx={{ pb: 4 }}>
-          Contact Us
-        </Typography>
-        <Typography>
-          <Link href="tel:+19078417274" passHref>
-            <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
-              (907) 841-7274
-            </Box>
-          </Link>
-        </Typography>
-        <Typography>
-          <Link href="mailto:ryan@pelletier.construction" passHref>
-            <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
+      <Stack>
+        {/* Header Section with similar image in testimonial page */}
+        <Box
+          sx={{
+            position: "relative",
+            height: "520px",
+            width: "100%",
+            overflow: "hidden",
+          }}
+        >
+          <Box
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 2, // Ensures that the text is above the image
+              backgroundColor: "rgba(0, 0, 0, 0.5)", // UPDATED TO 60% opacity overlay FOR THE TEXT TO STAND OUT
+            }}
+          >
+
+            <Typography component="h1" variant="h4" sx={{ pb: 4, color: "white", textAlign: "center" }}>
+              CONTACT US
+            </Typography>
+            <Typography sx={{ color: "white", textAlign: "center" }}>
+              <Box component="a" href="tel:+19078417274" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
+              (907)841-7274
+              </Box>
+            </Typography>
+            <Typography sx={{ color: "white", textAlign: "center" }}>
+              <Box component="a" href="mailto: ryan@pelletier.construction" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
               ryan@pelletier.construction
-            </Box>
-          </Link>
-        </Typography>
-        <Button variant="contained" color="primary" href="/contact" sx={{ mt: 3, mb: 4, fontSize: "1.2rem", width: "200px", height: "50px" }}>
-          Call Now
-        </Button>
-        <Box margin="auto" sx={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", backgroundColor: "rgba(54,54,54,1)" }}>
-          <Typography component="h1" variant="h4" sx={{ pb: 4, pt: 4, color: "white" }}>
-            Get in Touch
-          </Typography>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSelwJL2BR_yNzPqrdGUy_s5CZFI6mNpHTv4LQ0IxRYpjwvUVQ/viewform?embedded=true"
-            width="700" height="1300">Loading…</iframe>
+              </Box>
+            </Typography>
+            <Button
+              variant="contained"
+              color="primary"
+              href="/contact"
+              sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px", fontWeight: "bold" }}
+            >
+              CALL NOW
+            </Button>
+          </Box>
+
+          <Image
+            src={image}
+            alt="The house from the offer."
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+            priority={true}
+          />
         </Box>
-      </Box>
-    </Stack>    
-    <Footer />
+
+        <Box
+          margin="auto"
+          textAlign={"center"}
+          justifyContent={"center"}
+          sx={{ width: "100%", paddingTop: "120px", backgroundColor: "white" }}
+        >
+
+          <Box
+            margin="auto"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width: "100%",
+              backgroundColor: "rgba(54,54,54,1)",
+            }}
+          >
+            <Typography component="h1" variant="h4" sx={{ pb: 4, pt: 4, color: "white" }}>
+              Get in Touch
+            </Typography>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSelwJL2BR_yNzPqrdGUy_s5CZFI6mNpHTv4LQ0IxRYpjwvUVQ/viewform?embedded=true"
+              width="700"
+              height="1300"
+            >
+              Loading…
+            </iframe>
+          </Box>
+        </Box>
+      </Stack>
+      <Footer />
     </Box>
-  )
+  );
 }
