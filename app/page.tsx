@@ -40,12 +40,12 @@ export default function Home() {
           </Link> */}
 
           {/* updated to */}
-          <Box component="a" href="mailto: ryan@pelletier.construction" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }} > ryan@pelletier.construction
+          <Box component="a" href="mailto: ryan@pelletier.construction.com" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }} > ryan@pelletier.construction
           </Box>
 
         </Typography>
         <Button variant="contained" color="primary" href="/contact" sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px" }}>
-          Contact Us
+          Contact me
         </Button>
       </Box>
     </Stack>
