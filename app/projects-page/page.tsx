@@ -1,3 +1,4 @@
+'use client'
 import {Box, Stack, Typography} from "@mui/material";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -5,6 +6,7 @@ import Image from "next/image";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import { redirect } from "next/navigation";
 
 export default function Home() {
 
@@ -31,12 +33,14 @@ export default function Home() {
               objectFit: "cover",
             }}
             priority={true}
+            onClick={()=> redirect(`/projects-page/${item.link}`)}
           />
           <ImageListItemBar
             title={item.title}
             position="below"
             sx={{ textAlign:"left"}}
-          />
+            // onClick={()=> redirect(`/projects-page/${item.link}`)}
+            />
         </ImageListItem>
       ))}
       </ImageList>
@@ -59,49 +63,61 @@ const itemData = [
   {
     img: '/images/index/open-concept-kitchen.jpg',
     title: 'Open Concept Kitchen',
+    link: 'open_concept_kitchen',
   },
   {
     img: '/images/index/mukilteo_house.jpg',
     title: 'Mukilteo House',
+    link: 'mukilteo_house',
   },
   {
     img: '/images/index/wrap-around-deck-with-patio-cover.jpg',
     title: 'Wrap around deck with patio cover',
+    link: 'wrap_around_deck',
   },
   {
     img: '/images/index/ranch_home_update.jpg',
     title: 'Ranch Home Update',
+    link: 'ranch_home_update',
   },
   {
     img: '/images/index/timber_frame_barn.jpg',
     title: 'Timber Frame Barn',
+    link: 'timber_frame_barn',
   },
   {
     img: '/images/index/composite-deck.jpg',
     title: 'Composite Deck',
+    link: 'composite_deck',
   },
   {
     img: '/images/index/great_wall_of_lake_city.jpg',
     title: 'Great Wall of Lake City',
+    link: 'great_wall_of_lake_city',
   },
   {
     img: '/images/index/bathroom_expansion.jpg',
     title: 'Bathroom Expansion',
+    link: 'bathroom_expansion',
   },
   {
     img: '/images/index/railing.jpg',
     title: 'Railing',
+    link: 'railing',
   },
   {
     img: '/images/index/bathroom.jpg',
     title: 'Bathroom',
+    link: 'bathroom',
   },
   {
     img: '/images/index/modern-porch.jpg',
     title: 'Modern Porch',
+    link: 'modern_porch',
   },
   {
     img: '/images/index/new-shop.jpg',
     title: 'New Shop',
+    link: 'new_shop',
   },
 ];    
