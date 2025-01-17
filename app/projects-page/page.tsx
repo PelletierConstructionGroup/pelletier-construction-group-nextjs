@@ -86,9 +86,9 @@ const itemData = [
     link: 'timber_frame_barn',
   },
   {
-    img: '/images/index/composite-deck.jpg',
-    title: 'Composite Deck',
-    link: 'composite_deck',
+    img: '/images/index/bathroom_expansion.jpg',
+    title: 'Bathroom Expansion',
+    link: 'bathroom_expansion',
   },
   {
     img: '/images/index/great_wall_of_lake_city.jpg',
@@ -96,28 +96,13 @@ const itemData = [
     link: 'great_wall_of_lake_city',
   },
   {
-    img: '/images/index/bathroom_expansion.jpg',
-    title: 'Bathroom Expansion',
-    link: 'bathroom_expansion',
-  },
-  {
-    img: '/images/index/railing.jpg',
-    title: 'Railing',
-    link: 'railing',
+    img: '/images/index/composite-deck.jpg',
+    title: 'Composite Deck',
+    link: 'composite_deck',
   },
   {
     img: '/images/index/bathroom.jpg',
     title: 'Bathroom',
     link: 'bathroom',
-  },
-  {
-    img: '/images/index/modern-porch.jpg',
-    title: 'Modern Porch',
-    link: 'modern_porch',
-  },
-  {
-    img: '/images/index/new-shop.jpg',
-    title: 'New Shop',
-    link: 'new_shop',
   },
 ];    
