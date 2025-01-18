@@ -19,9 +19,11 @@ export default function Home() {
       }}
     >
       <Stack>
+
         <Hero imageSrc={heroImage} altText="{heroText}">
           {heroText}
         </Hero>
+        
         <Box
           margin="auto"
           textAlign={"center"}
