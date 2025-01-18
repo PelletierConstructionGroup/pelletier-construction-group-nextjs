@@ -45,13 +45,7 @@ const Hero: React.FC<HeroBannerProps> = ({
       <Image
         src={imageSrc}
         alt={altText}
-        style={{
-          width: "100%",
-          height: "auto",
-          maxHeight: "100%",
-          objectFit: "cover",
-          objectPosition: "center",
-        }}
+        fill={true}
         priority
       />
     </Box>
