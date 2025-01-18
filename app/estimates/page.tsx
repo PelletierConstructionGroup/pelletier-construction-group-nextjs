@@ -4,6 +4,9 @@ import Hero from "@/components/Hero";
 import Link from "next/link";
 
 export default function Home() {
+  const heroText = "Get in Touch for Estimates";
+  const heroImage = "/images/familys-historic-home.jpg";
+
   return (
     <Box
       sx={{
@@ -16,17 +19,8 @@ export default function Home() {
       }}
     >
       <Stack>
-        <Hero
-          imageSrc="/images/familys-historic-home.jpg"
-          altText="Estimates"
-          overlayColor="rgba(0, 0, 0, 0.4)"
-          height={520}
-        >
-          <Typography
-            sx={{ color: "white", textAlign: "center", fontSize: "2rem" }}
-          >
-            Estimates
-          </Typography>
+        <Hero imageSrc={heroImage} altText="{heroText}">
+          {heroText}
         </Hero>
         <Box
           margin="auto"

@@ -6,7 +6,8 @@ interface HeroBannerProps {
   imageSrc: string;
   altText?: string;
   overlayColor?: string;
-  height?: number | string;
+  height?: number | string;   // Optional: Custom height for the hero banner
+  fontSize?: number | string; // Optional: Custom font size for the text
   children?: React.ReactNode;
 }
 
@@ -15,7 +16,8 @@ const Hero: React.FC<HeroBannerProps> = ({
   altText = "",
   overlayColor = "rgba(0, 0, 0, 0.4)",
   height = 520,
-  children
+  fontSize = "3rem",
+  children,
 }) => {
   return (
     <Box
@@ -26,11 +28,11 @@ const Hero: React.FC<HeroBannerProps> = ({
         overflow: "hidden",
       }}
     >
-      {/* Overlay */}
+      {/* Overlay with Typography */}
       <Box
         sx={{
           position: "absolute",
-          inset: 0, 
+          inset: 0,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -38,15 +40,27 @@ const Hero: React.FC<HeroBannerProps> = ({
           backgroundColor: overlayColor,
         }}
       >
-        {children}
+        <Typography
+          sx={{
+            color: "white",
+            textAlign: "center",
+            fontSize,
+          }}
+        >
+          {children}
+        </Typography>
       </Box>
 
       {/* Background Image */}
       <Image
         src={imageSrc}
         alt={altText}
-        fill={true}
+        fill
         priority
+        style={{
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
       />
     </Box>
   );
