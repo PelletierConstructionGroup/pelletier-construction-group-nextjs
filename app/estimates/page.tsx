@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import Link from "next/link";
 
 export default function Home() {
-  const heroText = "Request an Estimate";
+  const heroText = "Request an Estimate!";
   const heroImage = "/images/familys-historic-home.jpg";
 
   return (
@@ -20,7 +20,7 @@ export default function Home() {
     >
       <Stack>
 
-        <Hero imageSrc={heroImage} altText="{heroText}">
+        <Hero imageSrc={heroImage} altText={heroText}>
           {heroText}
         </Hero>
         
