@@ -31,6 +31,7 @@ export default function Home() {
               minWidth: 248,
               minHeight:248,
               objectFit: "cover",
+              cursor: "pointer",
             }}
             priority={true}
             onClick={()=> redirect(`/projects-page/${item.link}`)}
@@ -38,7 +39,7 @@ export default function Home() {
           <ImageListItemBar
             title={item.title}
             position="below"
-            sx={{ textAlign:"left"}}
+            sx={{ textAlign:"left", cursor:"pointer"}}
             // onClick={()=> redirect(`/projects-page/${item.link}`)}
             />
         </ImageListItem>
