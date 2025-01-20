@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import logo_small from "@/public/logo_small.png";
 import {
@@ -27,6 +28,7 @@ const links = ["/", "/projects-page", "/estimates", "/about", "/testimonials", "
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const pathname = usePathname();
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -43,7 +45,14 @@ export default function Navbar() {
         {navItems.map((item, index) => (
           <Grid item key={item}>
             <Link href={links[index]} passHref>
-              <Button key={item} onClick={handleDrawerToggle}>
+              <Button 
+                key={item} 
+                onClick={handleDrawerToggle}
+                sx={{
+                  color: pathname === links[index] ? "blue" : "black",
+                  fontWeight: pathname === links[index] ? "bold" : "normal",
+                }}
+              >
                 {item}
               </Button>
             </Link>
@@ -79,7 +88,14 @@ export default function Navbar() {
               {navItems.map((item, index) => (
                 <Grid item key={item} sx={{ display: "flex" }}>
                   <Link href={links[index]} passHref>
-                    <Button key={item} sx={{ color: "black", fontSize: 16 }}>
+                    <Button 
+                      key={item} 
+                      sx={{ 
+                        color: pathname === links[index] ? "blue" : "black",
+                        fontWeight: pathname === links[index] ? "bold" : "normal",
+                        fontSize: 16,
+                      }}
+                    >
                       {item}
                     </Button>
                   </Link>
