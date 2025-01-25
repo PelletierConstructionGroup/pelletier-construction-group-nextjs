@@ -4,7 +4,7 @@ import logging
 import os
 
 SMART_ACCESS_TOKEN = os.environ['SMART_ACCESS_TOKEN']
-GITHUB_ACCESS_TOKEN = os.environ['GH_ACCESS_TOKEN_PELL']
+GITHUB_ACCESS_TOKEN_PELL = os.environ['GH_ACCESS_TOKEN_PELL']
 current_issue_num = int(os.environ['ISSUE_NUM'])  # Start from the last processed issue
 triggered_issue_num = int(os.environ['CURRENT_ISSUE_NUM'])  # Current issue number from event
 
