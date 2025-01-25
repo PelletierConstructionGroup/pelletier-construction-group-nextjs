@@ -10,7 +10,7 @@ permissions:
 
 env:
   SMART_ACCESS_TOKEN: ${{ secrets.SMARTSHEET_ACCESS_TOKEN }}
-  GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN_PELL }}
+  GH_ACCESS_TOKEN_PELL: ${{ secrets.GH_ACCESS_TOKEN_PELL }}
 
 jobs:
   fetch-and-store:
@@ -36,7 +36,7 @@ jobs:
         run: python post-issue-smartsheet.py
         env:
           SMART_ACCESS_TOKEN: ${{ secrets.SMARTSHEET_ACCESS_TOKEN }}
-          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN_PELL }}
+          GH_ACCESS_TOKEN_PELL: ${{ secrets.GH_ACCESS_TOKEN_PELL }}
           ISSUE_NUM: ${{ vars.ISSUE_NUM }}  # Last processed issue number
           CURRENT_ISSUE_NUM: ${{ github.event.issue.number }}  # Current issue number triggered by the event
 
