@@ -68,7 +68,7 @@ const itemData = [
   },
   {
     img: '/images/index/mukilteo_house.jpg',
-    title: 'Mukilteo House',
+    title: '4300 SF Home Remodel',
     link: 'mukilteo_house',
   },
   {

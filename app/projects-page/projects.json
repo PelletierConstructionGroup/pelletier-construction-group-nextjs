@@ -1,38 +1,65 @@
 [
     {
         "title": "Open Concept Kitchen",
-        "link": "open_concept_kitchen"
+        "link": "/projects-page/open_concept_kitchen",
+        "description": "Client had a terrible layout with multiple unusable rooms. We removed all the interior walls and a fireplace to move the kitchen and build a massive island!",
+        "photodir": "/images/projects/open-concept-kitchen",
+        "photocount": "29"
     },
     {
-        "title": "Mukilteo House",
-        "link": "mukilteo_house"
+        "title": "4300 SF Home Remodel",
+        "link": "mukilteo_house",
+        "description": "Complete remodel of 80s home",
+        "photodir": "",
+        "photocount": ""
     },
     {
         "title": "Wrap around deck with patio cover",
-        "link": "wrap_around_deck"
+        "link": "wrap_around_deck",
+        "description": "",
+        "photodir": "",
+        "photocount": ""
     },
     {
         "title": "Ranch Home Update",
-        "link": "ranch_home_update"
+        "link": "ranch_home_update",
+        "description": "Modern update on a 90s home",
+        "photodir": "",
+        "photocount": ""
     },
     {
         "title": "Timber Frame Barn",
-        "link": "timber_frame_barn"
+        "link": "timber_frame_barn",
+        "description": "Built with hand notched rough cut 8x8s",
+        "photodir": "",
+        "photocount": ""
     },
     {
         "title": "Composite Deck",
-        "link": "composite_deck"
+        "link": "composite_deck",
+        "description": "",
+        "photodir": "",
+        "photocount": ""
     },
     {
         "title": "Great Wall of Lake City",
-        "link": "great_wall_of_lake_city"
+        "link": "great_wall_of_lake_city",
+        "description": "When you just don’t like your neighbors",
+        "photodir": "",
+        "photocount": ""
     },
     {
         "title": "Bathroom Expansion",
-        "link": "bathroom_expansion"
+        "link": "bathroom_expansion",
+        "description": "Two bathroom remodel on the 3rd story of a town home. Took wall out and combined laundry room with second bathroom to build second master. Built new laundry room in garage",
+        "photodir": "",
+        "photocount": ""
     },
     {
         "title": "Bathroom",
-        "link": "bathroom"
+        "link": "bathroom",
+        "description": "",
+        "photodir": "",
+        "photocount": ""
     }
 ]
