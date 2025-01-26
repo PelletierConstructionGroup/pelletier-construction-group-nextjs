@@ -22,7 +22,7 @@ while current_issue_num <= triggered_issue_num:
     response = requests.get(
         f'https://api.github.com/repos/PelletierConstructionGroup/pelletier-construction-group/issues/{current_issue_num}',
         headers={
-            'Authorization': f'Bearer {GITHUB_ACCESS_TOKEN}',
+            'Authorization': f'Bearer {GITHUB_ACCESS_TOKEN_PELL}',
             'Content-Type': 'application/vnd.github+json',
             'X-GitHub-Api-Version': '2022-11-28'
         }
