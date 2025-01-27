@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Box, Typography, Fade, Button } from "@mui/material";
+import { Box, Typography, Fade, Button} from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
+import LinearProgress from "@mui/material/LinearProgress";
 
 interface SliderProps {
   directory: string
@@ -12,12 +13,14 @@ interface SliderProps {
 const ImageSlider: React.FC<SliderProps> = ({ directory, count }) => {
   const [slideIndex, setSlideIndex] = useState<number>(1);
   const [fade, setFade] = useState<boolean>(true);
+  
+  console.log(slideIndex)
 
   const showSlide = (n: number) => {
     setFade(false);
     setTimeout(() => {
       setSlideIndex(
-        (prevIndex) => (prevIndex + n + count) % count
+        (prevIndex) => ((prevIndex + n) % count) 
       );
       setFade(true);
     }, 0);
@@ -76,6 +79,9 @@ const ImageSlider: React.FC<SliderProps> = ({ directory, count }) => {
         <Button aria-label="Next" onClick={() => showSlide(1)}>
           <ArrowForwardIosIcon />
         </Button>
+      </Box>
+      <Box sx={{ flex: 1, pt: 2, width:"80%"}}>
+          <LinearProgress variant="determinate" value={Math.round(slideIndex/count*100)}/>
       </Box>
     </Box>
   );
