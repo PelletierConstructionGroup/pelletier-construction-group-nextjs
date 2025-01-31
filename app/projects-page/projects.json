@@ -31,35 +31,35 @@
         "title": "Timber Frame Barn",
         "link": "/projects-page/timber_frame_barn",
         "description": "Built with hand notched rough cut 8x8s",
-        "photodir": "",
-        "photocount": ""
+        "photodir": "/images/projects/timber-frame-barn",
+        "photocount": "19"
     },
     {
         "title": "Composite Deck",
         "link": "/projects-page/composite_deck",
         "description": "",
-        "photodir": "",
-        "photocount": ""
+        "photodir": "/images/projects/composite-deck",
+        "photocount": "3"
     },
     {
         "title": "Great Wall of Lake City",
         "link": "/projects-page/great_wall_of_lake_city",
         "description": "When you just don’t like your neighbors",
-        "photodir": "",
-        "photocount": ""
+        "photodir": "/images/projects/great-wall-of-lake-city",
+        "photocount": "13"
     },
     {
         "title": "Bathroom Expansion",
         "link": "/projects-page/bathroom_expansion",
         "description": "Two bathroom remodel on the 3rd story of a town home. Took wall out and combined laundry room with second bathroom to build second master. Built new laundry room in garage",
-        "photodir": "",
-        "photocount": ""
+        "photodir": "/images/projects/bathroom-expansion",
+        "photocount": "24"
     },
     {
         "title": "Bathroom",
         "link": "/projects-page/bathroom",
         "description": "",
-        "photodir": "",
-        "photocount": ""
+        "photodir": "/images/projects/bathroom",
+        "photocount": "8"
     }
 ]

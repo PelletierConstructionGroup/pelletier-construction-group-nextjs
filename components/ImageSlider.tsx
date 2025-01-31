@@ -81,7 +81,7 @@ const ImageSlider: React.FC<SliderProps> = ({ directory, count }) => {
         </Button>
       </Box>
       <Box sx={{ flex: 1, pt: 2, width:"80%"}}>
-          <LinearProgress variant="determinate" value={Math.round(slideIndex/count*100)}/>
+          <LinearProgress variant="determinate" value={Math.round((slideIndex+1)/count*100)}/>
       </Box>
     </Box>
   );
