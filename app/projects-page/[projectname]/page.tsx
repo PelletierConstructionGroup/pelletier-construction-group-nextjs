@@ -20,10 +20,10 @@ export default function Project() {
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: "100vh", maximumWidth: "100vw", backgroundColor: "white", color: "black" }}>
       <Stack>
         <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ width: "100%", paddingTop: "120px", backgroundColor:"white" }}>
-          <Typography component="h1" variant="h4" sx={{ pb: 2 }}>
+          <Typography component="h4" variant="h4" fontWeight="650" sx={{ pb: 2 }}>
               {project.title}
           </Typography>
-          <Typography component="p" variant="h6" >
+          <Typography component="p" variant="body1" sx={{ pb: 2 }}>
              {project.description}
           </Typography>
         </Box>

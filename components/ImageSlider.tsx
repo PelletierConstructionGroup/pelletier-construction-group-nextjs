@@ -13,8 +13,6 @@ interface SliderProps {
 const ImageSlider: React.FC<SliderProps> = ({ directory, count }) => {
   const [slideIndex, setSlideIndex] = useState<number>(1);
   const [fade, setFade] = useState<boolean>(true);
-  
-  console.log(slideIndex)
 
   const showSlide = (n: number) => {
     setFade(false);
@@ -50,7 +48,8 @@ const ImageSlider: React.FC<SliderProps> = ({ directory, count }) => {
         <Fade in={fade} timeout={500}>
           <Box
             sx={{
-              width: "100%",
+              width: 600,
+              height: 450,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -61,9 +60,9 @@ const ImageSlider: React.FC<SliderProps> = ({ directory, count }) => {
               src={`${directory}`+"/"+`${slideIndex}`+".jpeg"}
               alt={`${slideIndex}`}
               width={400}
-              height={300}
+              height={450}
               style={{
-                width:"100%",
+                width:"auto",
                 height:"100%",
                 minWidth: 248,
                 minHeight:248,
@@ -80,7 +79,7 @@ const ImageSlider: React.FC<SliderProps> = ({ directory, count }) => {
           <ArrowForwardIosIcon />
         </Button>
       </Box>
-      <Box sx={{ flex: 1, pt: 2, width:"80%"}}>
+      <Box sx={{ flex: 1, pt: 2, width:"60%"}}>
           <LinearProgress variant="determinate" value={Math.round((slideIndex+1)/count*100)}/>
       </Box>
     </Box>
