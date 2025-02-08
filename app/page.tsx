@@ -28,25 +28,38 @@ export default function Home() {
       <Hero imageSrc={heroImage} altText={textContent.title} height="44vh">
         <Typography
           component="h1"
-          sx={{ py: 4, textAlign: "center", color: "white", fontSize: "2.6rem" }}
+          sx={{
+            py: 4,
+            textAlign: "center",
+            color: "white",
+            fontSize: "2.6rem",
+          }}
           className={oswald.className}
         >
           {textContent.title}
         </Typography>
 
-        <Typography sx = {{color: "white", fontSize: "1.2rem", pb: 1}}>
-          <a
-            href={`tel:${textContent.phoneNumberFormatted}`}
-          >
+        <Typography
+          sx={{
+            color: "white",
+            fontSize: "1.2rem",
+            pb: 1,
+            "& a:hover": { textDecoration: "underline" },
+          }}
+        >
+          <a href={`tel:${textContent.phoneNumberFormatted}`}>
             {textContent.phoneNumberFormatted}
           </a>
         </Typography>
-        <Typography sx = {{color: "white", fontSize: "1.2rem", pb: 1}}>
-          <a
-            href={`mailto:${textContent.email}`}
-          >
-            {textContent.email}
-          </a>
+        <Typography
+          sx={{
+            color: "white",
+            fontSize: "1.2rem",
+            pb: 1,
+            "& a:hover": { textDecoration: "underline" },
+          }}
+        >
+          <a href={`mailto:${textContent.email}`}>{textContent.email}</a>
         </Typography>
 
         <Link href="/contact">
