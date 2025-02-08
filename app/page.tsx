@@ -111,9 +111,10 @@ export default function Home() {
       <Card
         sx={{
           height: 362.359,
-          backgroundImage: "url('/images/index/background_inner.jpg')",
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('/images/index/background_inner.jpg')",
           backgroundPosition: "center",
-          backgroundColor: "rgba(0,0,0,0.4)",
+          backgroundSize: "cover",
           marginTop: 5,
         }}
       >
@@ -122,7 +123,8 @@ export default function Home() {
             color="white"
             component="h1"
             fontSize="36px"
-            sx={{ pb: 2, textAlign: "center", marginTop: 2 }}
+            className={oswald.className}
+            sx={{ py: 2, textAlign: "center"}}
           >
             {textContent.experienceTitle}
           </Typography>
