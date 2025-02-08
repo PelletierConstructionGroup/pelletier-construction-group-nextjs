@@ -66,7 +66,7 @@ export default function Home() {
           <Button
             variant="contained"
             color="primary"
-            sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px" }}
+            sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px", fontWeight: "bold" }}
           >
             {textContent.contactButton}
           </Button>
