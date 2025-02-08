@@ -124,7 +124,7 @@ export default function Home() {
             component="h1"
             fontSize="36px"
             className={oswald.className}
-            sx={{ py: 2, textAlign: "center"}}
+            sx={{ py: 2, textAlign: "center" }}
           >
             {textContent.experienceTitle}
           </Typography>
