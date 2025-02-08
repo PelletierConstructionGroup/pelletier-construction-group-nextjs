@@ -1,3 +1,4 @@
+"Use Client";
 import {
   Box,
   Button,
@@ -6,7 +7,9 @@ import {
   CardContent,
   Typography,
   Container,
+  Link,
 } from "@mui/material";
+import { Oswald } from "next/font/google";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import ImageList from "@mui/material/ImageList";
@@ -14,52 +17,47 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import mainConst from "./mainConst.json";
 import Hero from "../components/Hero";
+const oswald = Oswald({ subsets: ["latin"] });
 
 export default function Home() {
   const { textContent, photoData } = mainConst;
-  const heroImage = "/images/familys-historic-home.jpg";
+  const heroImage = "/images/index/open-concept-kitchen.jpg";
 
   return (
     <>
-      <Hero imageSrc={heroImage} altText={textContent.title}>
-        <Typography component="h1" variant="h4" sx={{ py: 2 }}>
+      <Hero imageSrc={heroImage} altText={textContent.title} height="44vh">
+        <Typography
+          component="h1"
+          sx={{ py: 4, textAlign: "center", color: "white", fontSize: "2.6rem" }}
+          className={oswald.className}
+        >
           {textContent.title}
         </Typography>
-        <br />
-        <Typography>
-          <Box
-            component="a"
-            href={textContent.phoneNumber}
-            sx={{
-              color: "inherit",
-              textDecoration: "none",
-              "&:hover": { textDecoration: "underline" },
-            }}
+
+        <Typography sx = {{color: "white", fontSize: "1.2rem", pb: 1}}>
+          <a
+            href={`tel:${textContent.phoneNumberFormatted}`}
           >
             {textContent.phoneNumberFormatted}
-          </Box>
+          </a>
         </Typography>
-        <Typography>
-          <Box
-            component="a"
+        <Typography sx = {{color: "white", fontSize: "1.2rem", pb: 1}}>
+          <a
             href={`mailto:${textContent.email}`}
-            sx={{
-              color: "inherit",
-              textDecoration: "none",
-              "&:hover": { textDecoration: "underline" },
-            }}
           >
             {textContent.email}
-          </Box>
+          </a>
         </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          href="/contact"
-          sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px" }}
-        >
-          {textContent.contactButton}
-        </Button>
+
+        <Link href="/contact">
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px" }}
+          >
+            {textContent.contactButton}
+          </Button>
+        </Link>
       </Hero>
 
       <Typography
