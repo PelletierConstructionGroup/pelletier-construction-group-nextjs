@@ -1,8 +1,7 @@
 "use client";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Footer from "@/components/Footer";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import ImageSlider from "@/components/ImageSlider";
 
 export default function Project() {
