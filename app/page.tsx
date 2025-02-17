@@ -110,19 +110,19 @@ export default function Home() {
       </ImageList>
       <Card
         sx={{
-          height: 362.359,
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('/images/index/background_inner.jpg')",
+            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/index/background_inner.jpg')",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          marginTop: 5,
+          padding: 5,
+          borderRadius: 0,
         }}
       >
         <CardContent sx={{ alignContent: "center" }}>
           <Typography
             color="white"
-            component="h1"
-            fontSize="36px"
+            component="h2"
+            fontSize="2em"
             className={oswald.className}
             sx={{ py: 2, textAlign: "center" }}
           >
@@ -131,7 +131,7 @@ export default function Home() {
           <Typography
             color="white"
             variant="body1"
-            fontSize="22px"
+            fontSize="1.1em"
             sx={{
               pb: 4,
               textAlign: "center",
