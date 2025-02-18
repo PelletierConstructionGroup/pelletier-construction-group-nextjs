@@ -24,12 +24,15 @@ export default function AboutUs() {
             height: "520px",
             paddingTop: "120px",
             paddingBottom: "120px",
-            backgroundColor: "#b0b0b0", // Grey background
-            color: "white", // White text color
-            display: "flex", // Added for flexbox alignment
-            flexDirection: "column", // Ensures elements are stacked vertically
-            justifyContent: "center", // Centers content vertically
-            alignItems: "center", // Centers content horizontally
+            backgroundImage: "url('/images/index/ranch_home_update.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <Typography component="h1" variant="h4" sx={{ pb: 4 }}>
