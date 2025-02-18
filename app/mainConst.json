@@ -1,0 +1,63 @@
+{
+  "textContent": {
+    "title": "SEATTLE'S HOME RENOVATION SPECIALISTS",
+    "phoneNumber": "tel:9078417274",
+    "phoneNumberFormatted": "(907) 841-7274",
+    "email": "ryan@pelletier.construction",
+    "contactButton": "Contact Us",
+    "craftsmanshipTitle": "EXQUISITE CRAFTSMANSHIP & CARPENTRY",
+    "experienceTitle": "EXPERIENCE MATTERS.",
+    "experienceDescription": "We specialize in all aspects of home remodeling and improvements. Bathrooms, kitchens, decks, fences, sheds, finishing basements, and most other home improvements or repairs. Our goal is to provide the best customer experience and satisfaction in the industry. Give us a call for a free estimate.",
+    "estimateButton": "GET A FREE ESTIMATE"
+  },
+  "photoData": [
+    {
+      "img": "/images/index/open-concept-kitchen.jpg",
+      "title": "Open Concept Kitchen"
+    },
+    {
+      "img": "/images/index/mukilteo_house.jpg",
+      "title": "Mukilteo House"
+    },
+    {
+      "img": "/images/index/wrap-around-deck-with-patio-cover.jpg",
+      "title": "Wrap around deck with patio cover"
+    },
+    {
+      "img": "/images/index/ranch_home_update.jpg",
+      "title": "Ranch Home Update"
+    },
+    {
+      "img": "/images/index/timber_frame_barn.jpg",
+      "title": "Timber Frame Barn"
+    },
+    {
+      "img": "/images/index/composite-deck.jpg",
+      "title": "Composite Deck"
+    },
+    {
+      "img": "/images/index/great_wall_of_lake_city.jpg",
+      "title": "Great Wall of Lake City"
+    },
+    {
+      "img": "/images/index/bathroom_expansion.jpg",
+      "title": "Bathroom Expansion"
+    },
+    {
+      "img": "/images/index/railing.jpg",
+      "title": "Railing"
+    },
+    {
+      "img": "/images/index/bathroom.jpg",
+      "title": "Bathroom"
+    },
+    {
+      "img": "/images/index/modern-porch.jpg",
+      "title": "Modern Porch"
+    },
+    {
+      "img": "/images/index/new-shop.jpg",
+      "title": "New Shop"
+    }
+  ]
+}

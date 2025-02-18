@@ -65,7 +65,7 @@ export default function Navbar() {
 
   return (
     <Box>
-      <AppBar component="nav" sx={{ backgroundColor: "white" }}>
+      <AppBar component="nav" sx={{ backgroundColor: "white", padding: .5 }}>
         <Toolbar>
           <IconButton
             color="inherit"

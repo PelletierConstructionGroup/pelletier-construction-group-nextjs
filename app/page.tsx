@@ -1,144 +1,166 @@
-import {Box, Button, Card, CardActions, CardContent, Stack, Typography} from "@mui/material";
-import Footer from '../components/Footer';
-import Link from "next/link";
+"Use Client";
+import {
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+  Container,
+  Link,
+} from "@mui/material";
+import { Oswald } from "next/font/google";
+import Footer from "../components/Footer";
 import Image from "next/image";
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Brightness2 } from "@mui/icons-material";
-
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import mainConst from "./mainConst.json";
+import Hero from "../components/Hero";
+const oswald = Oswald({ subsets: ["latin"] });
 
 export default function Home() {
+  const { textContent, photoData } = mainConst;
+  const heroImage = "/images/index/open-concept-kitchen.jpg";
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: "100vh", backgroundColor: "white", color: "black" }}>
-    <Stack>
-      <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ paddingTop: "120px", backgroundColor:"white" }}>
-        <Typography component="h1" variant="h4" sx={{ pb: 4 }}>
-          Seattle&apos;s Premier DADU Specialists
-        </Typography>
-        <Typography>
-          {/* old */}
-          {/* <Link href="tel:+19078417274" passHref>
-            <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
-              (907) 841-7274
-            </Box>
-          </Link> */}
-
-          {/* updated to */}
-          <Box component="a" href="tel:+19078417274" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}> (907)8417274
-          </Box>
-
+    <>
+      <Hero imageSrc={heroImage} altText={textContent.title} height="44vh">
+        <Typography
+          component="h1"
+          sx={{
+            py: 4,
+            textAlign: "center",
+            color: "white",
+            fontSize: "2.6rem",
+          }}
+          className={oswald.className}
+        >
+          {textContent.title}
         </Typography>
 
-        <Typography>
-          {/* old */}
-          {/* <Link href="mailto:ryan@pelletier.construction" passHref>
-            <Box component="a" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}>
-              ryan@pelletier.construction
-            </Box>
-          </Link> */}
-
-          {/* updated to */}
-          <Box component="a" href="mailto: ryan@pelletier.construction" sx={{ color: "inherit", textDecoration: "none", "&:hover": { textDecoration: "underline" } }} > ryan@pelletier.construction
-          </Box>
-
+        <Typography
+          sx={{
+            color: "white",
+            fontSize: "1.2rem",
+            pb: 1,
+            "& a:hover": { textDecoration: "underline" },
+          }}
+        >
+          <a href={`tel:${textContent.phoneNumberFormatted}`}>
+            {textContent.phoneNumberFormatted}
+          </a>
         </Typography>
-        <Button variant="contained" color="primary" href="/contact" sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px" }}>
-          Contact Us
-        </Button>
-      </Box>
-    </Stack>
-    <Typography component="h1" variant="h4" sx={{ pb: 5, textAlign:'center', mt:3 }}>EXQUISITE CRAFTSMANSHIP & CARPENTRY</Typography>
-    <ImageList sx={{ width:'auto', height:'auto', marginLeft: 5, marginRight: 5 }} cols={3} rowHeight={330}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img} sx={{minWidth:248, marginLeft:1, marginRight:1}}>
-          <Image
-            src={`${item.img}`}
-            alt={item.title}
-            width={330}
-            height={330}
-            style={{
-              width:"100%",
-              height:"100%",
-              minWidth: 248,
-              minHeight:248,
-              objectFit: "cover",
+        <Typography
+          sx={{
+            color: "white",
+            fontSize: "1.2rem",
+            pb: 1,
+            "& a:hover": { textDecoration: "underline" },
+          }}
+        >
+          <a href={`mailto:${textContent.email}`}>{textContent.email}</a>
+        </Typography>
+
+        <Link href="/contact">
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px", fontWeight: "bold" }}
+          >
+            {textContent.contactButton}
+          </Button>
+        </Link>
+      </Hero>
+
+      <Typography
+        component="h1"
+        variant="h4"
+        sx={{ pb: 5, textAlign: "center", mt: 3 }}
+      >
+        {textContent.craftsmanshipTitle}
+      </Typography>
+      <ImageList
+        sx={{ width: "auto", height: "auto", marginLeft: 5, marginRight: 5 }}
+        cols={3}
+        rowHeight={330}
+      >
+        {photoData.map((item) => (
+          <ImageListItem
+            key={item.img}
+            sx={{ minWidth: 248, marginLeft: 1, marginRight: 1 }}
+          >
+            <Image
+              src={item.img}
+              alt={item.title}
+              width={330}
+              height={330}
+              style={{
+                width: "100%",
+                height: "100%",
+                minWidth: 248,
+                minHeight: 248,
+                objectFit: "cover",
+              }}
+              priority={true}
+            />
+            <ImageListItemBar title={item.title} position="below" />
+          </ImageListItem>
+        ))}
+      </ImageList>
+      <Card
+        sx={{
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/index/background_inner.jpg')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          padding: 5,
+          borderRadius: 0,
+        }}
+      >
+        <CardContent sx={{ alignContent: "center" }}>
+          <Typography
+            color="white"
+            component="h2"
+            fontSize="2em"
+            className={oswald.className}
+            sx={{ py: 2, textAlign: "center" }}
+          >
+            {textContent.experienceTitle}
+          </Typography>
+          <Typography
+            color="white"
+            variant="body1"
+            fontSize="1.1em"
+            sx={{
+              pb: 4,
+              textAlign: "center",
+              marginLeft: "10%",
+              marginRight: "10%",
             }}
-            priority={true}
-          />
-          <ImageListItemBar
-            title={item.title}
-            position="below"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
-    <Card sx={{ height: 362.359, backgroundImage: "url('/images/index/background_inner.jpg')", backgroundPosition:'center', backgroundColor:"rgba(0,0,0,0.4)", marginTop: 5 }}>
-      <CardContent sx={{alignContent: "center"}}>
-        <Typography color="white" component="h1" fontSize="36px" sx={{ pb: 2, textAlign: "center", marginTop:2, }}>EXPERIENCE MATTERS.</Typography>
-        <Typography color="white" variant="body1" fontSize="22px" sx={{ pb: 4, textAlign: "center", marginLeft:"10%", marginRight:"10%" }}>
-        We specialize in all aspects of home remodeling and improvements. Bathrooms, kitchens, decks, fences, sheds, finishing basements, and most other home improvements or repairs. Our goal is the provide the best customer experience and satisfaction in the industry. Give us a call for a free estimate.
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <Button variant="contained" color="primary" href="/estimates" sx={{ fontSize: "1.2rem", width: "300px", height: "50px", textAlign: "center", marginLeft:"auto", marginRight:"auto" }}>
-        GET A FREE ESTIMATE
-        </Button>
-      </CardActions>
-    </Card>  
-    <Footer />
-    </Box>
-  )
+          >
+            {textContent.experienceDescription}
+          </Typography>
+        </CardContent>
+        <CardActions disableSpacing>
+          <Button
+            variant="contained"
+            color="primary"
+            href="/estimates"
+            sx={{
+              fontSize: "1.2rem",
+              width: "300px",
+              height: "50px",
+              textAlign: "center",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            {textContent.estimateButton}
+          </Button>
+        </CardActions>
+      </Card>
+      <Footer />
+    </>
+  );
 }
-
-const itemData = [
-  {
-    img: '/images/index/open-concept-kitchen.jpg',
-    title: 'Open Concept Kitchen',
-  },
-  {
-    img: '/images/index/mukilteo_house.jpg',
-    title: 'Mukilteo House',
-  },
-  {
-    img: '/images/index/wrap-around-deck-with-patio-cover.jpg',
-    title: 'Wrap around deck with patio cover',
-  },
-  {
-    img: '/images/index/ranch_home_update.jpg',
-    title: 'Ranch Home Update',
-  },
-  {
-    img: '/images/index/timber_frame_barn.jpg',
-    title: 'Timber Frame Barn',
-  },
-  {
-    img: '/images/index/composite-deck.jpg',
-    title: 'Composite Deck',
-  },
-  {
-    img: '/images/index/great_wall_of_lake_city.jpg',
-    title: 'Great Wall of Lake City',
-  },
-  {
-    img: '/images/index/bathroom_expansion.jpg',
-    title: 'Bathroom Expansion',
-  },
-  {
-    img: '/images/index/railing.jpg',
-    title: 'Railing',
-  },
-  {
-    img: '/images/index/bathroom.jpg',
-    title: 'Bathroom',
-  },
-  {
-    img: '/images/index/modern-porch.jpg',
-    title: 'Modern Porch',
-  },
-  {
-    img: '/images/index/new-shop.jpg',
-    title: 'New Shop',
-  },
-];    

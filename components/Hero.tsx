@@ -1,5 +1,5 @@
 import type React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import Image from "next/image";
 
 interface HeroBannerProps {
@@ -40,15 +40,14 @@ const Hero: React.FC<HeroBannerProps> = ({
           backgroundColor: overlayColor,
         }}
       >
-        <Typography
+        <Container
           sx={{
             color: "white",
             textAlign: "center",
             fontSize,
-          }}
-        >
+          }}>
           {children}
-        </Typography>
+          </Container>
       </Box>
 
       {/* Background Image */}
