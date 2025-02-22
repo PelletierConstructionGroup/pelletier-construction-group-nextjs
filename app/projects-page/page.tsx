@@ -1,14 +1,15 @@
 'use client'
 import {Box, Stack, Typography} from "@mui/material";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import Image from "next/image";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter()
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: "100vh", maximumWidth: "100vw", backgroundColor: "white", color: "black" }}>
@@ -34,13 +35,13 @@ export default function Home() {
               cursor: "pointer",
             }}
             priority={true}
-            onClick={()=> redirect(`/projects-page/${item.link}`)}
+            onClick={()=> router.push(`/projects-page/${item.link}`)}
           />
           <ImageListItemBar
             title={item.title}
             position="below"
             sx={{ textAlign:"left", cursor:"pointer"}}
-            // onClick={()=> redirect(`/projects-page/${item.link}`)}
+            onClick={()=> router.push(`/projects-page/${item.link}`)}
             />
         </ImageListItem>
       ))}
@@ -68,7 +69,7 @@ const itemData = [
   },
   {
     img: '/images/index/mukilteo_house.jpg',
-    title: 'Mukilteo House',
+    title: '4300 SF Home Remodel',
     link: 'mukilteo_house',
   },
   {

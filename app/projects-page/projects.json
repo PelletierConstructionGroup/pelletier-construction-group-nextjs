@@ -1,38 +1,65 @@
 [
     {
         "title": "Open Concept Kitchen",
-        "link": "open_concept_kitchen"
+        "link": "/projects-page/open_concept_kitchen",
+        "description": "Client had a terrible layout with multiple unusable rooms. We removed all the interior walls and a fireplace to move the kitchen and build a massive island!",
+        "photodir": "/images/projects/open-concept-kitchen",
+        "photocount": "29"
     },
     {
-        "title": "Mukilteo House",
-        "link": "mukilteo_house"
+        "title": "4300 SF Home Remodel",
+        "link": "/projects-page/mukilteo_house",
+        "description": "Complete remodel of 80s home",
+        "photodir": "/images/projects/mukilteo-house",
+        "photocount": "53"
     },
     {
         "title": "Wrap around deck with patio cover",
-        "link": "wrap_around_deck"
+        "link": "/projects-page/wrap_around_deck",
+        "description": "",
+        "photodir": "/images/projects/wrap-around-deck-with-patio-cover",
+        "photocount": "12"
     },
     {
         "title": "Ranch Home Update",
-        "link": "ranch_home_update"
+        "link": "/projects-page/ranch_home_update",
+        "description": "Modern update on a 90s home",
+        "photodir": "/images/projects/ranch-home-update",
+        "photocount": "21"
     },
     {
         "title": "Timber Frame Barn",
-        "link": "timber_frame_barn"
+        "link": "/projects-page/timber_frame_barn",
+        "description": "Built with hand notched rough cut 8x8s",
+        "photodir": "/images/projects/timber-frame-barn",
+        "photocount": "19"
     },
     {
         "title": "Composite Deck",
-        "link": "composite_deck"
+        "link": "/projects-page/composite_deck",
+        "description": "",
+        "photodir": "/images/projects/composite-deck",
+        "photocount": "3"
     },
     {
         "title": "Great Wall of Lake City",
-        "link": "great_wall_of_lake_city"
+        "link": "/projects-page/great_wall_of_lake_city",
+        "description": "When you just don't like your neighbors",
+        "photodir": "/images/projects/great-wall-of-lake-city",
+        "photocount": "13"
     },
     {
         "title": "Bathroom Expansion",
-        "link": "bathroom_expansion"
+        "link": "/projects-page/bathroom_expansion",
+        "description": "Two bathroom remodel on the 3rd story of a town home. Took wall out and combined laundry room with second bathroom to build second master. Built new laundry room in garage",
+        "photodir": "/images/projects/bathroom-expansion",
+        "photocount": "24"
     },
     {
         "title": "Bathroom",
-        "link": "bathroom"
+        "link": "/projects-page/bathroom",
+        "description": "",
+        "photodir": "/images/projects/bathroom",
+        "photocount": "8"
     }
 ]
