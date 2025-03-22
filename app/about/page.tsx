@@ -1,7 +1,9 @@
-import {Box, Stack, Typography} from "@mui/material";
+import {Box, Card, CardActions, CardContent, Stack, Typography} from "@mui/material";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from 'next/image';
+import { Oswald } from "next/font/google";
+const oswald = Oswald({ subsets: ["latin"] });
 
 
 export default function Home() {
@@ -9,13 +11,43 @@ export default function Home() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: "100vh", maximumWidth: "100vw", backgroundColor: "white", color: "black" }}>
     <Stack>
-      <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ width: "100%", paddingTop: "120px", backgroundColor:"white" }}>
-      <Typography component="h1" variant="h4" sx={{ pb: 4 }}>
-          About Us
-        </Typography>
-        <Typography component="h1" variant="h5" sx={{ pb: 4 }}>
-          Dedicated to Our Clients
-        </Typography>
+    <Card
+        sx={{
+          backgroundPosition: "center",
+          backgroundColor: "gray",
+          backgroundSize: "cover",
+          padding: 0,
+          borderRadius: 0,
+          height: "44vh",
+        }}
+      >
+        <CardContent sx={{ alignContent: "center", pt:12 }}>
+          <Typography
+            component="h1"
+            sx={{
+              py: 4,
+              textAlign: "center",
+              color: "white",
+              fontSize: "2.6rem",
+            }}
+            className={oswald.className}
+          >
+            ABOUT US
+          </Typography>
+          <Typography
+            component="h1"
+            sx={{
+              textAlign: "center",
+              color: "white",
+              fontSize: "1.2rem",
+              pb: 1,
+            }}
+          >
+            DEDICATED TO OUR CLIENTS
+          </Typography>
+        </CardContent>
+      </Card>
+      <Box margin="auto" textAlign={"center"} justifyContent={"center"} sx={{ width: "100%", paddingTop: "40px", backgroundColor:"white" }}>
           <Box
             margin="auto"
             sx={{
