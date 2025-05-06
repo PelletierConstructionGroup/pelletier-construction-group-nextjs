@@ -6,6 +6,7 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import Popup from "@/components/Popup";
 
 interface Design {
   name: string;
@@ -87,7 +88,7 @@ export default function DADU() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">More details</Button>
+            <Popup name={design.name} img={design.img} description={design.description}/>
           </CardActions>
       </Card>
       ))}
