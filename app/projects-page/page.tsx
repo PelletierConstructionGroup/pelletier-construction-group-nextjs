@@ -5,7 +5,6 @@ import Image from "next/image";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
