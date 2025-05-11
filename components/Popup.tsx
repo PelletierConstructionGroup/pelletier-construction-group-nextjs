@@ -1,15 +1,18 @@
 'use client'
-import React, { useState } from "react";
-import { Box, Typography, Fade, Button, Stack} from "@mui/material";
+import React from "react";
+import { Box, Typography, Fade, Button, Stack, Container} from "@mui/material";
 import Image from "next/image";
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Modal from '@mui/material/Modal';
-import type { Design } from "@/styles/Design";
-
+import type { bulletPoints, Design } from "@/styles/Design";
 
 const Popup: React.FC<Design> = (design : Design) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const gallery:bulletPoints[] = design.detail.imamges;
 
   return (
     <div>
@@ -20,9 +23,7 @@ const Popup: React.FC<Design> = (design : Design) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Stack>
-          
-          <Stack sx={style}>  
+        <Stack sx={style}>  
             <Box>
               <Button onClick={handleClose} sx={{position:'absolute', float:'right', paddingLeft:'88%', fontSize: 20, fontWeight:"bold", paddingTop:0, height:25 }}>X</Button>
               <Typography id="modal-modal-title" variant="h6" component="h2">
@@ -31,8 +32,33 @@ const Popup: React.FC<Design> = (design : Design) => {
               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                 {design.description}
               </Typography>
-            </Box>
-          </Stack>
+              <ImageList sx={{ width:'auto', height:'auto', marginLeft: 5, marginRight: 5, pt:3 }} cols={3} rowHeight={200}>
+                {gallery.map((item:bulletPoints) => (
+                  <ImageListItem key={item.detail} sx={{minWidth:100, marginLeft:1, marginRight:1}}>
+                    <Image
+                      src={`${item.detail}`}
+                      alt={item.title}
+                      width={200}
+                      height={150}
+                      style={{
+                        width:"100%",
+                        height:"100%",
+                        minWidth: 200,
+                        minHeight:150,
+                        objectFit: "cover",
+                        cursor: "pointer",
+                      }}
+                      priority={true}
+                    />
+                    <ImageListItemBar
+                      title={item.title}
+                      position="below"
+                      sx={{ textAlign:"left", cursor:"pointer"}}
+                      />
+                  </ImageListItem>
+                  ))}
+            </ImageList>
+          </Box>
         </Stack>
       </Modal>
     </div>
@@ -44,7 +70,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: 800,
   bgcolor: 'background.paper',
   border: '2px solid #000',
   // boxShadow: 24,

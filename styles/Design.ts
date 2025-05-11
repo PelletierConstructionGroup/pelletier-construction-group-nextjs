@@ -10,11 +10,12 @@ export type Design = {
 
 export type DesignDetail = {
     pros: bulletPoints[];
-    imamges: string[];
+    imamges: bulletPoints[];
     budget: bulletPoints[];
+    add_cost: bulletPoints[];
 };
 
-type bulletPoints = {
+export type bulletPoints = {
     title: string;
     detail: string;
 };
