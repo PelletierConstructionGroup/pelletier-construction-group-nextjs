@@ -9,13 +9,13 @@ export type Design = {
 };
 
 export type DesignDetail = {
-    pros: bulletPoints[];
-    imamges: bulletPoints[];
-    budget: bulletPoints[];
-    add_cost: bulletPoints[];
+    pros: BulletPoints[];
+    imamges: BulletPoints[];
+    budget: BulletPoints[];
+    add_cost: BulletPoints[];
 };
 
-export type bulletPoints = {
+export type BulletPoints = {
     title: string;
     detail: string;
 };

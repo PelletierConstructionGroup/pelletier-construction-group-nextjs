@@ -47,28 +47,32 @@
         "detail": 
         {
             "pros": { "bulletPoints": [
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""}
+                    {"title":"Accessibility", "detail":"The Cedar has living on one level, flush entry thresholds and flooring transitions, galley kitchen and a generous central entry that connects to all spaces."},
+                    {"title":"Low cost", "detail":"Standard wood frame construction, vented shed roof, careful placement of windows, and a simple exterior allow for low cost construction without sacrificing durability, function or style."},
+                    {"title":"Family friendly", "detail":"One-bedroom plan works well for parent aging in place, with a two-bedroom version for additional study, or household with children."},
+                    {"title":"Privacy", "detail":"Careful opening placement allows for privacy on three sides, with a covered open patio as the indoor outdoor focus of the living space."},
+                    {"title":"Green Building", "detail":"The design is targeting Built Green 4 Star; reduced air infiltration; energy efficient heating; cooling and water heating systems; passive solar heat gain in window/shading in summer; low-VOC, recycled and renewable materials; no fossil fuel appliances; and all-LED lighting."}
                     ]},
-            "imamges": ["/images/index/timber_frame_barn.jpg", "/images/index/timber_frame_barn.jpg"],
+            "imamges": [
+                    {"title":"Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST1.jpg"},
+                    {"title":"Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST2.jpg"},
+                    {"title":"Floor plan of one-bedroom Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST3.jpg"},
+                    {"title":"Floor plan of two-bedroom Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST4.jpg"},
+                    {"title":"Cutaway section of Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST5.jpg"}
+                    ],
             "budget": {"bulletPoints": [
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""}
+                    {"title":"Pre-approved plan license", "detail":"$1,000"},
+                    {"title":"Site evaluation and preliminary site plan", "detail":"$500-750"},
+                    {"title":"Site-specific foundation engineering", "detail":"$1,000-$1,500"},
+                    {"title":"Site-specific permit documents", "detail":"$2,000-4,000"},
+                    {"title":"Required forms", "detail":"$500"}
                     ]},
             "add_cost": {"bulletPoints": [
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""}
-                    ]} 
+                    {"title":"Survey", "detail":"Coordinated directly by owner, estimated $2,500-$3,500, required when structure is proposed within two feet of required building setbacks."},
+                    {"title":"Geotechnical & stormwater", "detail":"Coordinated directly by owner, varies by site"},
+                    {"title":"Arborist", "detail":"Required if large trees would be impacted by construction"},
+                    {"title":"Built Green certification & verification", "detail":"$1,700, required if you already have an ADU on the property; optional otherwise."}
+                    ]}
         }
       },
       {
@@ -81,28 +85,32 @@
         "detail": 
         {
             "pros": { "bulletPoints": [
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""}
+                    {"title":"Accessibility", "detail":"The Cedar has living on one level, flush entry thresholds and flooring transitions, galley kitchen and a generous central entry that connects to all spaces."},
+                    {"title":"Low cost", "detail":"Standard wood frame construction, vented shed roof, careful placement of windows, and a simple exterior allow for low cost construction without sacrificing durability, function or style."},
+                    {"title":"Family friendly", "detail":"One-bedroom plan works well for parent aging in place, with a two-bedroom version for additional study, or household with children."},
+                    {"title":"Privacy", "detail":"Careful opening placement allows for privacy on three sides, with a covered open patio as the indoor outdoor focus of the living space."},
+                    {"title":"Green Building", "detail":"The design is targeting Built Green 4 Star; reduced air infiltration; energy efficient heating; cooling and water heating systems; passive solar heat gain in window/shading in summer; low-VOC, recycled and renewable materials; no fossil fuel appliances; and all-LED lighting."}
                     ]},
-            "imamges": ["/images/index/timber_frame_barn.jpg", "/images/index/timber_frame_barn.jpg"],
+            "imamges": [
+                    {"title":"Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST1.jpg"},
+                    {"title":"Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST2.jpg"},
+                    {"title":"Floor plan of one-bedroom Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST3.jpg"},
+                    {"title":"Floor plan of two-bedroom Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST4.jpg"},
+                    {"title":"Cutaway section of Cedar Cottage", "detail":"/images/dadus/cast_architecture/PreApprovedDADU_CAST5.jpg"}
+                    ],
             "budget": {"bulletPoints": [
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""}
+                    {"title":"Pre-approved plan license", "detail":"$1,000"},
+                    {"title":"Site evaluation and preliminary site plan", "detail":"$500-750"},
+                    {"title":"Site-specific foundation engineering", "detail":"$1,000-$1,500"},
+                    {"title":"Site-specific permit documents", "detail":"$2,000-4,000"},
+                    {"title":"Required forms", "detail":"$500"}
                     ]},
             "add_cost": {"bulletPoints": [
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""},
-                    {"title":"", "detail":""}
-                    ]} 
+                    {"title":"Survey", "detail":"Coordinated directly by owner, estimated $2,500-$3,500, required when structure is proposed within two feet of required building setbacks."},
+                    {"title":"Geotechnical & stormwater", "detail":"Coordinated directly by owner, varies by site"},
+                    {"title":"Arborist", "detail":"Required if large trees would be impacted by construction"},
+                    {"title":"Built Green certification & verification", "detail":"$1,700, required if you already have an ADU on the property; optional otherwise."}
+                    ]}
         }
       }
 ]
