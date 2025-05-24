@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Box, Typography, Fade, Button } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -14,7 +14,8 @@ const Carousel: React.FC<CarouselProps> = ({ slides, visibility, timer }) => {
   const [slideIndex, setSlideIndex] = useState<number>(0);
   const [fade, setFade] = useState<boolean>(true);
 
-  const showSlide = (n: number) => {
+  const showSlide = useCallback(
+    (n: number) => {
     setFade(false);
     setTimeout(() => {
       setSlideIndex(
@@ -22,7 +23,9 @@ const Carousel: React.FC<CarouselProps> = ({ slides, visibility, timer }) => {
       );
       setFade(true);
     }, 0);
-  };
+  },
+  [slides.length]
+);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,7 +33,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides, visibility, timer }) => {
     }, timer * 1000);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [showSlide, timer]);
 
   return (
     <Box
