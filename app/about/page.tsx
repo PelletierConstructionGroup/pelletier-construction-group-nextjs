@@ -10,8 +10,10 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { Oswald } from "next/font/google";
-const oswald = Oswald({ subsets: ["latin"] });
 import HeaderImage from "@/public/images/index/ranch_home_update.jpg";
+import ResponsiveFormEmbed from "@/components/ResponsiveFormEmbed";
+
+const oswald = Oswald({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -108,31 +110,8 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
-          <Box
-            margin="auto"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              width: "100%",
-              backgroundColor: "rgba(54,54,54,1)",
-            }}
-          >
-            <Typography
-              component="h1"
-              variant="h4"
-              sx={{ pb: 4, pt: 4, color: "white" }}
-            >
-              Get in Touch
-            </Typography>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSelwJL2BR_yNzPqrdGUy_s5CZFI6mNpHTv4LQ0IxRYpjwvUVQ/viewform?embedded=true"
-              width="700"
-              height="1300"
-            >
-              Loading…
-            </iframe>
-          </Box>
+
+          <ResponsiveFormEmbed title="Get in Touch" />
         </Box>
       </Stack>
       <Footer />

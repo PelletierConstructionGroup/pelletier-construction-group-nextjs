@@ -6,6 +6,7 @@ import Image from "next/image";
 import image from "@/public/images/familys-historic-home.jpg";
 import Carousel from "@/components/Carousel";
 import Link from "next/link";
+import ResponsiveFormEmbed from "@/components/ResponsiveFormEmbed";
 
 //Carousel prop configuration
 const timer = 50; // number of second before the carousel changes
@@ -200,32 +201,7 @@ export default function Home() {
             visibility={starsVisibility}
             timer={timer}
           />
-          ;
-          <Box
-            margin="auto"
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              width: "100%",
-              backgroundColor: "rgba(54,54,54,1)",
-            }}
-          >
-            <Typography
-              component="h1"
-              variant="h4"
-              sx={{ pb: 4, pt: 4, color: "white" }}
-            >
-              Get in Touch
-            </Typography>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSelwJL2BR_yNzPqrdGUy_s5CZFI6mNpHTv4LQ0IxRYpjwvUVQ/viewform?embedded=true"
-              width="700"
-              height="1300"
-            >
-              Loading…
-            </iframe>
-          </Box>
+          <ResponsiveFormEmbed title="Get in Touch" />
         </Box>
       </Stack>
       <Footer />
