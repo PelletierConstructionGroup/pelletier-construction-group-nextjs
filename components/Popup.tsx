@@ -34,7 +34,7 @@ const Popup: React.FC<Design> = (design : Design) => {
               <Typography id="modal-modal-title" variant="h6" component="h2">
                 {design.name}
               </Typography>
-              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }} color="BLACK">
                 {design.description}
               </Typography>
               <ImageList sx={{ width:'auto', height:'auto', marginLeft: 5, marginRight: 5, pt:3 }} cols={2} rowHeight={200}>
