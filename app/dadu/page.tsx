@@ -6,17 +6,11 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-
-interface Design {
-  name: string;
-  img: string;
-  description: string;
-  sqft: string;
-  bed: string;
-  bath: string;
-}
+import Popup from "@/components/Popup";
+import { Design } from "@/styles/Design";
 
 export default function DADU() {
+  const gallery : Design[] = require('@/app/dadu/dadus.json')
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: "100vh", maximumWidth: "100vw", backgroundColor: "white", color: "black" }}>
@@ -69,7 +63,7 @@ export default function DADU() {
       </Box>
     </Stack>
     <Stack margin="auto" spacing={{ xs: 1, sm: 2, md:3 }} direction="row" useFlexGap sx={{ flexWrap: 'wrap', maxWidth:"80%" }}>
-      {gallery.map((design)=> (
+      {gallery.map((design : Design)=> (
         <Card key={design.name} sx={{ maxWidth: 345 }}>
           <CardMedia
             component="img"
@@ -87,7 +81,7 @@ export default function DADU() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">More details</Button>
+            <Popup {...design}/>
           </CardActions>
       </Card>
       ))}
@@ -97,29 +91,29 @@ export default function DADU() {
   )
 }
 
-const gallery: Design[] = [
-  {
-    name: 'CAST Architecture-1',
-    img: '/images/index/timber_frame_barn.jpg',
-    description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
-    sqft: '467',
-    bed: '1-2',
-    bath: '1',
-  },
-  {
-    name: 'CAST Architecture-2',
-    img: '/images/index/timber_frame_barn.jpg',
-    description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
-    sqft: '467',
-    bed: '1-2',
-    bath: '1',
-  },
-  {
-    name: 'CAST Architecture-3',
-    img: '/images/index/timber_frame_barn.jpg',
-    description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
-    sqft: '467',
-    bed: '1-2',
-    bath: '1',
-  },
-];
+// const gallery: Design[] = [
+//   {
+//     name: 'CAST Architecture-1',
+//     img: '/images/index/timber_frame_barn.jpg',
+//     description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
+//     sqft: '467',
+//     bed: '1-2',
+//     bath: '1',
+//   },
+//   {
+//     name: 'CAST Architecture-2',
+//     img: '/images/index/timber_frame_barn.jpg',
+//     description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
+//     sqft: '467',
+//     bed: '1-2',
+//     bath: '1',
+//   },
+//   {
+//     name: 'CAST Architecture-3',
+//     img: '/images/index/timber_frame_barn.jpg',
+//     description: 'At only 467 square feet of interior floor area, the Cedar Cottage is an extremely efficient footprint that provides well daylit space for living, necessary storage, flexibility on many sites, including sloped ones, covered outdoor porch space plus easy expandability for families or roommates as a two-bedroom model.',
+//     sqft: '467',
+//     bed: '1-2',
+//     bath: '1',
+//   },
+// ];
