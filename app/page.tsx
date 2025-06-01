@@ -18,60 +18,80 @@ import ImageListItemBar from "@mui/material/ImageListItemBar";
 import mainConst from "./mainConst.json";
 import Hero from "../components/Hero";
 const oswald = Oswald({ subsets: ["latin"] });
-
 export default function Home() {
   const { textContent, photoData } = mainConst;
   const heroImage = "/images/index/open-concept-kitchen.jpg";
 
   return (
     <>
-      <Hero imageSrc={heroImage} altText={textContent.title} height="44vh">
-        <Typography
-          component="h1"
-          sx={{
-            py: 4,
-            textAlign: "center",
-            color: "white",
-            fontSize: "2.6rem",
-          }}
-          className={oswald.className}
-        >
-          {textContent.title}
-        </Typography>
+      <Hero
+  imageSrc={heroImage}
+  altText={textContent.title}
+  sx={{
+    minHeight: { xs: "70vh", sm: "60vh", md: "44vh" },
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    px: 2,
+    py: 6,
+  }}
+>
+  <Typography
+    component="h1"
+    sx={{
+      py: 2,
+      textAlign: "center",
+      color: "white",
+      fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.6rem" },
+    }}
+    className={oswald.className}
+  >
+    {textContent.title}
+  </Typography>
 
-        <Typography
-          sx={{
-            color: "white",
-            fontSize: "1.2rem",
-            pb: 1,
-            "& a:hover": { textDecoration: "underline" },
-          }}
-        >
-          <a href={`tel:${textContent.phoneNumberFormatted}`}>
-            {textContent.phoneNumberFormatted}
-          </a>
-        </Typography>
-        <Typography
-          sx={{
-            color: "white",
-            fontSize: "1.2rem",
-            pb: 1,
-            "& a:hover": { textDecoration: "underline" },
-          }}
-        >
-          <a href={`mailto:${textContent.email}`}>{textContent.email}</a>
-        </Typography>
+  <Typography
+    sx={{
+      color: "white",
+      fontSize: { xs: "1rem", sm: "1.1rem" },
+      pb: 1,
+      "& a:hover": { textDecoration: "underline" },
+    }}
+  >
+    <a href={`tel:${textContent.phoneNumberFormatted}`}>
+      {textContent.phoneNumberFormatted}
+    </a>
+  </Typography>
 
-        <Link href="/contact">
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{ mt: 3, fontSize: "1.2rem", width: "200px", height: "50px", fontWeight: "bold" }}
-          >
-            {textContent.contactButton}
-          </Button>
-        </Link>
-      </Hero>
+  <Typography
+    sx={{
+      color: "white",
+      fontSize: { xs: "1rem", sm: "1.1rem" },
+      pb: 1,
+      "& a:hover": { textDecoration: "underline" },
+    }}
+  >
+    <a href={`mailto:${textContent.email}`}>{textContent.email}</a>
+  </Typography>
+
+  <Link href="/contact">
+    <Button
+      variant="contained"
+      color="primary"
+      sx={{
+        mt: 3,
+        fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
+        width: "200px",
+        height: "50px",
+        fontWeight: "bold",
+      }}
+    >
+      {textContent.contactButton}
+    </Button>
+  </Link>
+</Hero>
+
 
       <Typography
         component="h1"
