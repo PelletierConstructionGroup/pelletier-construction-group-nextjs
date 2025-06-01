@@ -16,16 +16,16 @@ const Carousel: React.FC<CarouselProps> = ({ slides, visibility, timer }) => {
 
   const showSlide = useCallback(
     (n: number) => {
-    setFade(false);
-    setTimeout(() => {
-      setSlideIndex(
-        (prevIndex) => (prevIndex + n + slides.length) % slides.length
-      );
-      setFade(true);
-    }, 0);
-  },
-  [slides.length]
-);
+      setFade(false);
+      setTimeout(() => {
+        setSlideIndex(
+          (prevIndex) => (prevIndex + n + slides.length) % slides.length
+        );
+        setFade(true);
+      }, 0);
+    },
+    [slides.length]
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,8 +42,10 @@ const Carousel: React.FC<CarouselProps> = ({ slides, visibility, timer }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        marginInline: "10em",
-        height: "520px",
+        marginInline: { xs: 2, md: "10em" },
+        minHeight: "520px",
+        height: "auto",
+        paddingY: 4,
       }}
     >
       <Box
