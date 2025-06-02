@@ -7,6 +7,7 @@ import image from "@/public/images/familys-historic-home.jpg";
 import Carousel from "@/components/Carousel";
 import Link from "next/link";
 import ResponsiveFormEmbed from "@/components/ResponsiveFormEmbed";
+import Hero from "@/components/Hero";
 
 //Carousel prop configuration
 const timer = 50; // number of second before the carousel changes
@@ -43,52 +44,17 @@ export default function Home() {
   return (
     <Box sx={{ mt: 5.7 }}>
       <Stack>
-        <Box
-          sx={{
-            position: "relative",
-            height: "520px",
-            width: "100%",
-            overflow: "hidden",
-          }}
+        <Hero
+          imageSrc="/images/familys-historic-home.jpg"
+          altText="The house from the offer."
         >
-          <Box
-            sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: 2, // Ensures that the text is above the image
-              backgroundColor: "rgba(0, 0, 0, 0.4)", // 40% opacity overlay
-            }}
+          <Typography
+            variant="h4"
+            sx={{ fontSize: { xs: "1.5rem", md: "2.5rem" } }}
           >
-            <Typography
-              sx={{
-                color: "white",
-                textAlign: "center",
-                fontSize: "2rem", // Adjust the size as needed
-              }}
-            >
-              KIND WORDS FROM OUR COLLABORATORS
-            </Typography>
-          </Box>
-
-          <Image
-            src={image}
-            alt="The house from the offer."
-            style={{
-              width: "100%",
-              height: "auto",
-              maxHeight: "100%",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-            priority={true}
-          />
-        </Box>
+            KIND WORDS FROM OUR COLLABORATORS
+          </Typography>
+        </Hero>
 
         <Box
           margin="auto"
@@ -100,37 +66,40 @@ export default function Home() {
             sx={{
               display: "flex",
               flexDirection: "row",
-              height: "520px",
               gap: 2,
+              paddingTop: 2,
+              paddingBottom: 2,
             }}
           >
             <Box
-              width="75%"
-              margin="auto"
-              paddingX="80px"
-              textAlign="left"
-              justifyContent="center"
+              sx={{
+                width: { xs: "100%", md: "75%" },
+                paddingX: { xs: 2, md: "80px" },
+                textAlign: "left",
+                justifyContent: "center",
+              }}
             >
               <Box margin="auto" textAlign="left" justifyContent="center">
-                <Typography
-                  component="h4"
-                  variant="h4"
-                  sx={{ color: "rgba(168,63,16,1)" }}
-                >
+                <Typography component="h4" variant="h4">
                   Maneesh
                 </Typography>
               </Box>
               <Box margin="auto" textAlign="left" justifyContent="center">
-                <Typography
-                  component="h6"
-                  variant="h6"
-                  sx={{ color: "rgba(168,63,16,1)" }}
-                >
+                <Typography component="h6" variant="h6">
                   Kirkland, WA
                 </Typography>
               </Box>
             </Box>
-            <Box margin="auto" textAlign="left" justifyContent="center">
+            <Box
+              sx={{
+                width: { xs: "100%", md: "90%" },
+                paddingLeft: { xs: 2, md: "80px" },
+                paddingRight: { xs: 2, md: 0 },
+                textAlign: "left",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
               <Typography width="90%" sx={{ color: "rgba(51, 65, 85)" }}>
                 We hired Ryan with Pelletier Construction to do some home
                 improvement to our house. We added a small deck to our backyard
@@ -145,21 +114,24 @@ export default function Home() {
               </Typography>
             </Box>
           </Box>
+
           <Box
             sx={{
               display: "flex",
               flexDirection: "row",
-              height: "520px",
               gap: 2,
+              paddingTop: 2,
+              paddingBottom: 2,
               backgroundColor: "rgba(168,63,16,1)",
             }}
           >
             <Box
-              width="75%"
-              margin="auto"
-              paddingX="80px"
-              textAlign="left"
-              justifyContent="center"
+              sx={{
+                width: { xs: "100%", md: "75%" },
+                paddingX: { xs: 2, md: "80px" },
+                textAlign: "left",
+                justifyContent: "center",
+              }}
             >
               <Box margin="auto" textAlign="left" justifyContent="center">
                 <Typography
@@ -180,7 +152,16 @@ export default function Home() {
                 </Typography>
               </Box>
             </Box>
-            <Box margin="auto" textAlign="left" justifyContent="center">
+            <Box
+              sx={{
+                width: { xs: "100%", md: "90%" },
+                paddingLeft: { xs: 2, md: "80px" },
+                paddingRight: { xs: 2, md: 0 },
+                textAlign: "left",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
               <Typography width="90%" sx={{ color: "rgba(255,255,255,1)" }}>
                 We worked with the PCG team on two projects after moving into
                 our new home in May 2021: 1) a renovation of our downstairs

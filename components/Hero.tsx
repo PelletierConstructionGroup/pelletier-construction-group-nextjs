@@ -1,5 +1,5 @@
 import type React from "react";
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography, Container, SxProps, Theme } from "@mui/material";
 import Image from "next/image";
 
 interface HeroBannerProps {
@@ -9,6 +9,7 @@ interface HeroBannerProps {
   height?: number | string;   // Optional: Custom height for the hero banner
   fontSize?: number | string; // Optional: Custom font size for the text
   children?: React.ReactNode;
+  sx?: SxProps<Theme>;
 }
 
 const Hero: React.FC<HeroBannerProps> = ({
