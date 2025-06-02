@@ -49,7 +49,7 @@ export default function DADU() {
             &nbsp;Select a design
         </Typography>
         <Typography component="p" variant="body1" sx={{ color: "black", textAlign:'left', mb:"0" }}>
-        Once you choose a plan, connect with its designer through the contact information below. The designer can guide you through the permitting process, describe other services they offer, and share the fee to use their design.
+        Connect with us through the contact button below. We will guide you through the permitting process and describe other services available.
         </Typography>
         <CheckIcon sx={{font:'large', textAlign:'left' }}/>
         <Typography component="h6" variant="h6" sx={{ color: "black", display:"inline", textAlign:'left' }}>
