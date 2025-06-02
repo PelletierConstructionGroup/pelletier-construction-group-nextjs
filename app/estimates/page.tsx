@@ -25,7 +25,9 @@ export default function Home() {
           altText={heroText}
           overlayColor="rgba(0, 0, 0, 0.7)"
         >
-          {heroText}
+          <Typography variant="h2" sx={{ fontSize: "3rem" }}>
+            {heroText}
+          </Typography>
         </Hero>
 
         <Box
