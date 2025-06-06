@@ -1,13 +1,14 @@
 import type React from "react";
-import { Box, Typography, Container, SxProps, Theme } from "@mui/material";
+import { Box, Container, SxProps, Theme } from "@mui/material";
 import Image from "next/image";
 
 interface HeroBannerProps {
   imageSrc: string;
   altText?: string;
   overlayColor?: string;
-  height?: number | string;   // Optional: Custom height for the hero banner
-  fontSize?: number | string; // Optional: Custom font size for the text
+  height?: number | string;
+  fontSize?: number | string;
+  textColor?: string; // New optional prop for text color
   children?: React.ReactNode;
   sx?: SxProps<Theme>;
 }
@@ -15,9 +16,10 @@ interface HeroBannerProps {
 const Hero: React.FC<HeroBannerProps> = ({
   imageSrc,
   altText = "",
-  overlayColor = "rgba(0, 0, 0, 0.4)",
+  overlayColor = "rgba(0, 0, 0, 0.7)",
   height = 520,
   fontSize = "3rem",
+  textColor = "#fff", // Default to white text - improving contrast
   children,
 }) => {
   return (
@@ -38,17 +40,20 @@ const Hero: React.FC<HeroBannerProps> = ({
           alignItems: "center",
           justifyContent: "center",
           zIndex: 2,
-          backgroundColor: overlayColor,
+          background: `linear-gradient(${overlayColor}, ${overlayColor})`,
         }}
       >
         <Container
           sx={{
-            color: "white",
+            color: textColor,
             textAlign: "center",
             fontSize,
-          }}>
+            textShadow: "0 2px 6px rgba(0,0,0,0.5)", // Adds shadow behind the text 0.5 opacity
+            zIndex: 3,
+          }}
+        >
           {children}
-          </Container>
+        </Container>
       </Box>
 
       {/* Background Image */}
@@ -60,6 +65,7 @@ const Hero: React.FC<HeroBannerProps> = ({
         style={{
           objectFit: "cover",
           objectPosition: "center",
+          zIndex: 1,
         }}
       />
     </Box>

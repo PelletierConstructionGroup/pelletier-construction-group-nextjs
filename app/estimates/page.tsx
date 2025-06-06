@@ -20,11 +20,16 @@ export default function Home() {
       }}
     >
       <Stack>
-
-        <Hero imageSrc={heroImage} altText={heroText}>
-          {heroText}
+        <Hero
+          imageSrc={heroImage}
+          altText={heroText}
+          overlayColor="rgba(0, 0, 0, 0.7)"
+        >
+          <Typography variant="h2" sx={{ fontSize: "3rem" }}>
+            {heroText}
+          </Typography>
         </Hero>
-        
+
         <Box
           margin="auto"
           textAlign={"center"}
