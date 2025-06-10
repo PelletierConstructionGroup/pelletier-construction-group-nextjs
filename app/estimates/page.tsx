@@ -6,7 +6,7 @@ import ResponsiveFormEmbed from "@/components/ResponsiveFormEmbed";
 
 export default function Home() {
   const heroText = "Request an Estimate!";
-  const heroImage = "/images/familys-historic-home.jpg";
+  const heroImage = "/images/index/background_inner.jpg";
 
   return (
     <Box
