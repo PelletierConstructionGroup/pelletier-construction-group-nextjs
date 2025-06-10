@@ -21,7 +21,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 const drawerWidth = 240;
 
 // Updated navItems array to include Blueprint Builder
-const navItems = ["HOME", "PROJECTS", "ESTIMATES", "ABOUT", "TESTIMONIALS", "CONTACT", "BLUEPRINT BUILDER", "DADU/ADU"];
+const navItems = ["HOME", "PROJECTS", "ESTIMATES", "ABOUT", "TESTIMONIALS", "CONTACT", "DADU/ADU"];
 
 // Updated links array to include the path for the Blueprint Builder page
 const links = ["/", "/projects-page", "/estimates", "/about", "/testimonials", "/contact", "/blueprint", "/dadu"];
